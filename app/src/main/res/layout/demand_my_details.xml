@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffdd00"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="需求详情"
+            android:textColor="#333333"
+            android:textSize="60px" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="40px">
+
+                <com.freak.shopping.custom.CircleImageView
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/liaotian" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40px"
+                    android:gravity="center"
+                    android:text="陪聊天"
+                    android:textColor="#666666"
+                    android:textSize="50px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="40px"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:text="未成交"
+                    android:textColor="#ff6600"
+                    android:textSize="50px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="#b5b5b5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="需求信息"
+                        android:textColor="#333333"
+                        android:textSize="45px" />
+
+                    <View
+                        android:layout_width="250px"
+                        android:layout_height="10px"
+                        android:background="#ffdd00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="应邀者"
+                        android:textColor="#666666"
+                        android:textSize="45px" />
+
+                    <View
+                        android:layout_width="210px"
+                        android:layout_height="10px"
+                        android:background="#ffdd00"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1180px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="预约时间"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="2017-07-03 20:00"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#b5b5b5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="结束时间"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="2017-07-03 20:00"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#b5b5b5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="性别要求"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="女"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#b5b5b5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="服务方式"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="我到游戏玩家那里去"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#b5b5b5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="需求详情"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="奇迹暖暖有人玩吗？"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#b5b5b5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="年龄要求"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="18-25岁"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#b5b5b5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="我的口味"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="鲁菜"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#b5b5b5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="期望价格"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="5-20元"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#b5b5b5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150px"
+                    android:paddingLeft="40px"
+                    android:paddingRight="40px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="诚意金"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="40px"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="500元"
+                        android:textColor="#ff6600"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

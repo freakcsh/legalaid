@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="需求品类"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="男士SAP"
+            android:textColor="#333333"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="3"
+            android:gravity="center|left"
+            android:text="选择菜式（可多选）"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center|right"
+            android:text="鲁菜、粤菜"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <View
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="40px"
+            android:background="@mipmap/more_xiao" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="服务方式"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="我去找他"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <View
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="40px"
+            android:background="@mipmap/more_xiao" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="服务时间"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="周六、周日"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <View
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="40px"
+            android:background="@mipmap/more_xiao" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="用户海报"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="1"
+            android:gravity="center|right">
+
+            <ImageView
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_marginRight="60px"
+                android:background="@mipmap/tianjiatupian" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:paddingTop="40px"
+            android:text="简单描述"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="1"
+            android:paddingTop="40px"
+            android:text="请输入简单描述"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="期待价格"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="300元/小时"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <View
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="40px"
+            android:background="@mipmap/more_xiao" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5" />
+    <include
+        layout="@layout/text_view_huang"/>
+</LinearLayout>

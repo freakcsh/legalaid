@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="right|center">
+                <ImageView
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:layout_marginRight="180px"
+                    android:background="@mipmap/fabuxuqiu"/>
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
+                    android:gravity="center"
+                    android:text="发布需求"
+                    android:layout_marginLeft="50px"
+                    android:textColor="#666666"
+                    android:textSize="40px" />
+            </LinearLayout>
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:gravity="center|left">
+               <ImageView
+                   android:layout_width="150px"
+                   android:layout_height="150px"
+                   android:layout_marginLeft="180px"
+                   android:background="@mipmap/fanbujineng"/>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="发布技能"
+                   android:textSize="40px"
+                   android:layout_marginTop="40px"
+                   android:layout_marginRight="40px"
+                   android:textColor="#666666"
+                   android:gravity="center"/>
+           </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:background="@mipmap/guanbi_da"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

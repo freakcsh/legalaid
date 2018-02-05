@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="40px"
+        android:paddingTop="20px"
+        android:paddingRight="40px"
+        android:paddingBottom="20px">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pt_list_one"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            />
+
+        <TextView
+            android:id="@+id/pt_list_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:textColor="#2d77f1"
+            android:textSize="50px"
+            android:text="恋恋baby"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/pt_list_one"
+            android:layout_toEndOf="@+id/pt_list_one"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/pt_list_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="35px"
+            android:text="6月15日"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/pt_list_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:paddingTop="10px"
+        android:paddingBottom="10px"
+        android:textColor="#333333"
+        android:textSize="40px"
+        android:text="新食堂的味道相当不错，装修风格也很小清新，。大中午的食堂已经被我霸占了。"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40px"
+        android:paddingTop="20px">
+
+        <ImageView
+            android:id="@+id/pt_list_five"
+            android:layout_width="300px"
+            android:layout_height="320px"
+            android:layout_marginRight="40px"
+          />
+
+        <ImageView
+            android:id="@+id/pt_list_six"
+            android:layout_width="300px"
+            android:layout_height="320px"
+            android:layout_marginRight="40px"
+           />
+
+        <ImageView
+            android:id="@+id/pt_list_seven"
+            android:layout_width="300px"
+            android:layout_height="320px"
+            android:layout_marginLeft="10px"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:background="#f5f5f5"/>
+</LinearLayout>

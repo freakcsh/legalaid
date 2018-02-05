@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="40px">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/demand_all_img"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_gravity="center"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#ffdd00"
+           />
+
+        <TextView
+            android:id="@+id/demand_all_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:gravity="center"
+            android:text="陪聊天"
+            android:textColor="#666666"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/demand_all_zt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:text="未成交"
+            android:textColor="#ff6600"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="40px"
+        android:background="#b5b5b5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:gravity="center"
+        android:paddingBottom="20px"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:paddingTop="20px">
+
+        <TextView
+            android:id="@+id/demand_all_yy_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="应邀（5）"
+            android:textColor="#666666"
+            android:textSize="40px" />
+        <!-- person gridView item-->
+        <com.freak.shopping.activity.demand.NoScrollGridView
+            android:id="@+id/demand_all_gird_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchMode="columnWidth"
+            android:numColumns="5"
+            android:scrollbars="none"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:horizontalSpacing="5dip"
+            android:verticalSpacing="5dip"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="#b5b5b5" />
+</LinearLayout>

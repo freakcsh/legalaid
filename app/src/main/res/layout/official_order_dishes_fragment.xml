@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/official_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="1000px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px">
+
+        <ImageView
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30px"
+            android:background="@mipmap/publish_goods_hui" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|bottom"
+                    android:text="￥"
+                    android:textColor="#ff6600"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/official_order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|bottom"
+                    android:text="0"
+                    android:textColor="#ff6600"
+                    android:textSize="50px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/official_order_all_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="合计"
+                    android:textColor="#999999"
+                    android:textSize="40px" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/official_order_ok"
+            android:layout_width="300px"
+            android:layout_height="match_parent"
+            android:background="#ababab"
+            android:gravity="center"
+            android:text="选好了"
+            android:textColor="#ffffff"
+            android:textSize="50px" />
+
+    </LinearLayout>
+
+</LinearLayout>

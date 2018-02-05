@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="40px">
+
+        <ImageView
+            android:id="@+id/my_coupon_img"
+            android:layout_width="match_parent"
+            android:layout_height="400px"
+            android:background="@mipmap/youhuiquan_youse"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="54dp"
+            android:text="￥"
+            android:textColor="#ffdd00"
+            android:textSize="40px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/my_coupon_money"
+            android:layout_width="200px"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView31"
+            android:layout_alignBottom="@+id/textView31"
+            android:layout_toEndOf="@+id/textView31"
+            android:layout_toRightOf="@+id/textView31"
+            android:text="20"
+            android:textColor="#ffdd00"
+            android:textSize="80px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/my_coupon_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView31"
+            android:layout_alignStart="@+id/textView31"
+            android:layout_below="@+id/my_coupon_money"
+            android:layout_marginTop="9dp"
+            android:text="满100元使用"
+            android:textColor="#666666"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/coupon_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/my_coupon_money"
+            android:layout_centerHorizontal="true"
+            android:text="20元优惠劵"
+            android:textColor="#666666"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:background="@drawable/text_view_hui"
+            android:layout_alignBottom="@+id/textView31"
+            android:layout_alignLeft="@+id/coupon_money"
+            android:layout_alignStart="@+id/coupon_money" />
+
+        <TextView
+            android:id="@+id/my_coupon_state"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginStart="9dp"
+            android:text="未使用"
+            android:textColor="#666666"
+            android:textSize="40px"
+            android:layout_alignBottom="@+id/textView34"
+            android:layout_toRightOf="@+id/textView34"
+            android:layout_toEndOf="@+id/textView34" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:background="@drawable/text_view_hui"
+            android:layout_alignBaseline="@+id/my_coupon_limit"
+            android:layout_alignBottom="@+id/my_coupon_limit"
+            android:layout_alignLeft="@+id/textView34"
+            android:layout_alignStart="@+id/textView34" />
+
+        <TextView
+            android:id="@+id/my_coupon_limit_use"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/my_coupon_state"
+            android:layout_alignStart="@+id/my_coupon_state"
+            android:layout_below="@+id/textView31"
+            android:text="满100元可用"
+            android:textColor="#666666"
+            android:layout_marginTop="15px"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:background="@drawable/text_view_hui"
+            android:layout_below="@+id/my_coupon_limit"
+            android:layout_alignLeft="@+id/textView37"
+            android:layout_alignStart="@+id/textView37"
+            android:layout_marginTop="7dp" />
+
+        <TextView
+            android:id="@+id/my_coupon_limit_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-04-01至2017-05-01"
+            android:textColor="#666666"
+            android:textSize="40px"
+            android:layout_below="@+id/my_coupon_limit"
+            android:layout_alignLeft="@+id/my_coupon_limit_use"
+            android:layout_alignStart="@+id/my_coupon_limit_use" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="#f5f5f5"/>
+</LinearLayout>

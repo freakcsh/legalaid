@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+   <include
+       layout="@layout/title"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600px"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:background="@mipmap/chongzhichenggong" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:text="充值成功"
+            android:textColor="#333333"
+            android:textSize="50px" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginLeft="40px"
+        android:gravity="center_vertical"
+        android:text="已充值成功"
+        android:textColor="#333333"
+        android:textSize="50px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:text="您的余额为["
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="20.00元"
+            android:gravity="center"
+            android:textColor="#ff8831"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="],更多详细情况请前往"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:textSize="40px" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:text="我的余额页面查询"
+        android:textSize="40px"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="40px"
+        android:textColor="#666666"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom">
+        <TextView
+            android:layout_width="950px"
+            android:layout_height="120px"
+            android:text="返回"
+            android:textColor="#333333"
+            android:textSize="50px"
+            android:background="@drawable/text_view_huang"
+            android:layout_marginBottom="50px"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:gravity="center">
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="4" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:gravity="center">
+
+        <com.freak.shopping.custom.CircleImageView
+            android:id="@+id/imageView5"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_marginLeft="50px"
+            android:background="@drawable/tx1" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView5"
+            android:layout_marginLeft="50px"
+            android:layout_marginStart="50px"
+            android:layout_toEndOf="@+id/imageView5"
+            android:layout_toRightOf="@+id/imageView5"
+            android:text="恋恋baby"
+            android:textColor="#333333"
+            android:textSize="50px" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="150px"
+            android:layout_height="60px"
+            android:layout_alignBottom="@+id/imageView5"
+            android:layout_alignLeft="@+id/textView20"
+            android:layout_alignStart="@+id/textView20"
+            android:background="@drawable/text_view_custom"
+            android:gravity="center"
+            android:paddingLeft="30px"
+            android:text="23"
+            android:textColor="#ffffff"
+            android:textSize="40px" />
+
+        <ImageView
+            android:layout_width="30px"
+            android:layout_height="50px"
+            android:layout_alignBottom="@+id/textView21"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="55dp"
+            android:layout_toLeftOf="@+id/textView21"
+            android:layout_toStartOf="@+id/textView21"
+           />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView22"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:text="1.5km"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#b5b5b5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_marginLeft="50px"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:text="TA的验证"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|end">
+
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_marginRight="20px"
+                />
+
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_marginRight="20px"
+                />
+
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_marginRight="40px"
+               />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#b5b5b5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_marginLeft="50px"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:text="线下服务"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:text="300元/小时"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#b5b5b5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_marginLeft="50px"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:text="应邀时间"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:text="2017-07-13 20:00"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#b5b5b5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_marginLeft="50px"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:text="TA的优势"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:text="让人回复精神"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="950px"
+            android:layout_height="120px"
+            android:background="@drawable/text_view_huang"
+            android:gravity="center"
+            android:text="确认应邀者"
+            android:textColor="#333333"
+            android:textSize="50px" />
+
+        <TextView
+            android:layout_width="950px"
+            android:layout_height="120px"
+            android:layout_marginTop="50px"
+            android:background="@drawable/text_view_huang"
+            android:gravity="center"
+            android:text="发消息"
+            android:textColor="#333333"
+            android:textSize="50px" />
+    </LinearLayout>
+
+</LinearLayout>

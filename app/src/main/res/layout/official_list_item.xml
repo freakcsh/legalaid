@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/official_img_big"
+                android:layout_width="1000px"
+                android:layout_height="600px"
+                android:layout_marginTop="60px"
+                android:background="@drawable/tx11" />
+
+            <ImageView
+                android:id="@+id/official_img_small"
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:layout_alignLeft="@+id/official_img_big"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/official_img_big"
+                android:layout_marginLeft="9dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/tx1" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300px">
+
+            <TextView
+                android:id="@+id/official_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="40px"
+                android:gravity="center"
+                android:text="海底捞夏日活动，满100减50"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/official_person_num"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_alignLeft="@+id/official_activity"
+                android:layout_alignStart="@+id/official_activity"
+                android:layout_below="@+id/official_activity"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="报名人数：100"
+                android:textColor="#999999"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/official_look_num"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_alignTop="@+id/official_person_num"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_toEndOf="@+id/official_person_num"
+                android:layout_toRightOf="@+id/official_person_num"
+                android:gravity="center"
+                android:text="浏览量：46467"
+                android:textColor="#999999"
+                android:textSize="40px" />
+
+            <TextView
+                android:id="@+id/official_order"
+                android:layout_width="200px"
+                android:layout_height="80px"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:background="@drawable/text_view_huang"
+                android:gravity="center"
+                android:text="点菜"
+                android:textColor="#333333"
+                android:textSize="40px" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

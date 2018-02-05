@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <TextView
+        android:id="@+id/reselect_list"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:textColor="#333333"
+        android:textSize="40px"
+        android:text="天河区"
+        android:layout_marginLeft="40px"
+        android:gravity="center_vertical"
+        />
+
+</LinearLayout>

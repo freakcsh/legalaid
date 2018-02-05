@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600px"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:background="@mipmap/chongzhichenggong" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:text="发布成功"
+            android:textColor="#333333"
+            android:textSize="50px" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginLeft="40px"
+        android:gravity="center_vertical"
+        android:text="发布需求成功"
+        android:textColor="#333333"
+        android:textSize="45px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:text="您的["
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="看电影"
+            android:gravity="center"
+            android:textColor="#ff8831"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="]需求已发布成功，请等待应邀者应邀。"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:textSize="40px" />
+
+    </LinearLayout>
+
+  <include
+      layout="@layout/text_view_huang"/>
+</LinearLayout>

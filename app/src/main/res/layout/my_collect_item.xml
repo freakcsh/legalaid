@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.freak.shopping.custom.CircleImageView
+            android:id="@+id/my_collect_img"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px"
+            />
+
+        <TextView
+            android:id="@+id/my_collect_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:gravity="center"
+            android:text="恋恋baby"
+            android:textColor="#2d77f1"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/my_collect_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50px"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="6月15日"
+            android:textColor="#999999"
+            android:textSize="35px" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_marginTop="50px"
+            android:layout_marginLeft="40px"
+            android:id="@+id/my_collect_img_da" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TA的服务："
+            android:textSize="40px"
+            android:textColor="#333333"
+            android:layout_alignTop="@+id/my_collect_img_da"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:id="@+id/textView29" />
+        <TextView
+            android:id="@+id/my_collect_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="看电影"
+            android:textSize="40px"
+            android:textColor="#333333"
+            android:layout_alignBaseline="@+id/textView29"
+            android:layout_alignBottom="@+id/textView29"
+            android:layout_toRightOf="@+id/textView29"
+            android:layout_toEndOf="@+id/textView29" />
+        <TextView
+            android:id="@+id/my_collect_introduce"
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:text="广东人，肤白貌美大长腿，喜欢去旅游和话就闪电借款"
+            android:textSize="40px"
+            android:textColor="#666666"
+            android:maxEms="28"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_below="@+id/textView29"
+            android:layout_alignLeft="@+id/textView29"
+            android:layout_alignStart="@+id/textView29"
+            android:layout_marginTop="15dp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:background="#f5f5f5"/>
+
+</LinearLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="250px"
+                    android:background="#ffdd00" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/retur"
+                    android:paddingTop="40px"
+                    android:paddingLeft="40px"
+                   />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="34dp"
+                android:gravity="center">
+
+                <com.freak.shopping.custom.CircleImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="250px"
+                    android:layout_height="250px"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tx1"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200px"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageView"
+                    android:background="#ffffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:layout_marginTop="10px"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="恋恋baby"
+                            android:textColor="#333333"
+                            android:textSize="50px" />
+
+                        <TextView
+                            android:layout_width="150px"
+                            android:layout_height="60px"
+                            android:layout_marginLeft="30px"
+                            android:paddingLeft="20px"
+                            android:background="@drawable/text_view_custom"
+                            android:drawableLeft="@mipmap/nv_bai"
+                            android:gravity="center"
+                            android:text="23" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="40px"
+                            android:layout_height="40px"
+                            android:background="@mipmap/coordinates_fill_kui" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="广州市"
+                            android:textColor="#666666"
+                            android:textSize="40px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="白云区"
+                            android:textColor="#666666"
+                            android:textSize="40px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="黄石路"
+                            android:textColor="#666666"
+                            android:textSize="40px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:gravity="center"
+                            android:text="1.5km"
+                            android:textColor="#666666"
+                            android:textSize="40px" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:layout_marginTop="10px"
+            android:background="#b5b5b5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:background="#fbfbfb"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="TA的信息"
+                    android:textColor="#333333"
+                    android:textSize="45px" />
+
+                <ImageView
+                    android:layout_width="300px"
+                    android:layout_height="10px"
+                    android:background="#ffdd00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="TA的服务"
+                    android:textColor="#666666"
+                    android:textSize="45px" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="300px"
+                    android:layout_height="10px"
+                    android:background="#ffdd00" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <!-- 他的信息开始-->
+       <include
+           android:id="@+id/ta_fu_wu"
+           android:visibility="gone"
+           layout="@layout/ta_serve"/>
+
+        <include
+            android:id="@+id/ta_xin_xi"
+            layout="@layout/homepage_information" />
+        <!-- 上部分-->
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/share"
+            android:gravity="center"
+            android:padding="15px"
+            android:text="分享"
+            android:textColor="#666666"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/collection_da"
+            android:gravity="center"
+            android:padding="15px"
+            android:text="收藏"
+            android:textColor="#666666"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/praise_full_da"
+            android:gravity="center"
+            android:padding="15px"
+            android:text="点赞"
+            android:textColor="#666666"
+            android:textSize="40px" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#ffdd00"
+            android:gravity="center"
+            android:padding="15px">
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:background="@drawable/yueren" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30px"
+                android:gravity="center"
+                android:text="约她"
+                android:textColor="#4a4a4a"
+                android:textSize="50px" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

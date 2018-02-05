@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:cai="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:orientation="horizontal">
+
+        <!--<com.freak.shopping.custom.ChangeColorIconWithText-->
+            <!--android:id="@+id/home"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="5dp"-->
+            <!--cai:icon="@drawable/homepage"-->
+            <!--cai:text="首页"-->
+            <!--cai:text_size="40px"-->
+            <!--cai:color="#ffdd00"-->
+
+            <!--&gt;-->
+
+        <!--</com.freak.shopping.custom.ChangeColorIconWithText>-->
+
+        <!--<com.freak.shopping.custom.ChangeColorIconWithText-->
+            <!--android:id="@+id/official"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="5dp"-->
+            <!--cai:icon="@drawable/integral"-->
+            <!--cai:text="官方活动"-->
+            <!--cai:text_size="40px"-->
+            <!--cai:color="#ffdd00">-->
+
+        <!--</com.freak.shopping.custom.ChangeColorIconWithText>-->
+      <!--<ImageView-->
+         <!--android:id="@+id/image_fa_bu"-->
+          <!--android:layout_width="20dp"-->
+          <!--android:layout_weight="1"-->
+          <!--android:padding="10dp"-->
+          <!--android:layout_height="match_parent"-->
+          <!--android:background="@drawable/fabu"/>-->
+
+
+
+        <!--<com.freak.shopping.custom.ChangeColorIconWithText-->
+            <!--android:id="@+id/demand"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="5dp"-->
+            <!--cai:icon="@drawable/order"-->
+            <!--cai:text="需求管理"-->
+            <!--cai:text_size="40px"-->
+            <!--cai:color="#ffdd00">-->
+
+        <!--</com.freak.shopping.custom.ChangeColorIconWithText>-->
+
+        <!--<com.freak.shopping.custom.ChangeColorIconWithText-->
+            <!--android:id="@+id/me"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="5dp"-->
+            <!--cai:icon="@drawable/mine"-->
+            <!--cai:text="我的"-->
+            <!--cai:text_size="40px"-->
+            <!--cai:color="#ffdd00">-->
+
+        <!--</com.freak.shopping.custom.ChangeColorIconWithText>-->
+    </LinearLayout>
+</LinearLayout>

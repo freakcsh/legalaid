@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="性别"
+            android:textColor="#333333"
+            android:textSize="56px" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40px"
+            android:paddingBottom="40px"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="不限"
+                android:layout_marginRight="40px"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginRight="40px"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="男"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="女"
+                android:textColor="#333333"
+                android:textSize="40px" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="年龄"
+            android:textColor="#333333"
+            android:textSize="56px"
+            android:layout_marginBottom="40px"
+            />
+
+        <com.freak.shopping.custom.MyRadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginRight="40px"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="不限"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginRight="40px"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="25以下"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="25-35"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="35以上"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+        </com.freak.shopping.custom.MyRadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="距离"
+            android:textColor="#333333"
+            android:textSize="56px" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="40px"
+            android:paddingBottom="40px"
+            >
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginRight="40px"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="不限"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginRight="40px"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="5公里内"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginRight="40px"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="10公里内"
+                android:textColor="#333333"
+                android:textSize="40px" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:paddingTop="20px"
+        android:paddingBottom="20px"
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="认证"
+            android:textColor="#333333"
+            android:textSize="50px" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="40px"
+            android:paddingBottom="40px">
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginRight="40px"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="不限"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginRight="40px"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="身份验证"
+                android:textColor="#333333"
+                android:textSize="40px" />
+
+            <RadioButton
+                android:layout_width="300px"
+                android:layout_height="100px"
+                android:layout_gravity="center"
+                android:layout_marginRight="40px"
+                android:background="@drawable/radio_button_custom"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="距离验证"
+                android:textColor="#333333"
+                android:textSize="40px" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#b5b5b5"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="#333333"
+            android:textSize="50px" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffdd00"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#333333"
+            android:textSize="50px" />
+    </LinearLayout>
+</LinearLayout>

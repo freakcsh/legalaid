@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <com.freak.shopping.custom.MyRadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="50px">
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="住房"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="合租房"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="情绪控制"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="看电影"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="逛街"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+
+    </com.freak.shopping.custom.MyRadioGroup>
+
+    <com.freak.shopping.custom.MyRadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="40px">
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="健身"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="跑步"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="游泳"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="羽毛球"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="高尔夫球"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="自行车"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+
+    </com.freak.shopping.custom.MyRadioGroup>
+
+    <com.freak.shopping.custom.MyRadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="40px">
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="美食"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="品酒"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="学英文"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+        <RadioButton
+            android:layout_width="300px"
+            android:layout_height="100px"
+            android:background="@drawable/radio_button_custom"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="城市旅游"
+            android:textColor="#333333"
+            android:textSize="60px" />
+
+
+    </com.freak.shopping.custom.MyRadioGroup>
+</LinearLayout>

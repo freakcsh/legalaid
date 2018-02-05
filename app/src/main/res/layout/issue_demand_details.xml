@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="需求品类"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="男士SAP"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="预约时间"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="我去找他"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="30px"
+                    android:layout_height="60px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30px"
+                    android:background="@mipmap/more_xiao" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="性别要求"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="女"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="30px"
+                    android:layout_height="60px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30px"
+                    android:background="@mipmap/more_xiao" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="年龄要求"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="20~25岁"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="30px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30px"
+                    android:background="@mipmap/more_xiao" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="服务方式"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="我去找他"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="30px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30px"
+                    android:background="@mipmap/more_xiao" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center|left"
+                    android:text="我的口味（可多选）"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center|right"
+                    android:text="鲁菜、粤菜"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="30px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30px"
+                    android:background="@mipmap/more_xiao" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="餐厅消费预算"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="100~200元"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="30px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30px"
+                    android:background="@mipmap/more_xiao" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingTop="40px"
+                    android:text="需求详情"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingTop="40px"
+                    android:text="请输入需求详情"
+                    android:layout_marginRight="60px"
+                    android:textColor="#666666"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="期待价格"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="300元/小时"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="30px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30px"
+                    android:background="@mipmap/more_xiao" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="诚意金"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="500元"
+                    android:textColor="#ff6600"
+                    android:textSize="40px" />
+
+                <View
+                    android:layout_width="30px"
+                    android:layout_height="40px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30px"
+                    android:background="@mipmap/more_xiao" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:orientation="horizontal"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <RadioButton
+
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:background="@drawable/post_radio_button"
+                    android:button="@null"
+                    android:checked="true" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="同时为我推荐更多服务者"
+                    android:textColor="#666666"
+                    android:textSize="40px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="合计：￥"
+                        android:textColor="#666666"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="495"
+                        android:textColor="#ff6600"
+                        android:textSize="50px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ffdd00"
+                        android:gravity="center"
+                        android:text="发布需求"
+                        android:textColor="#333333"
+                        android:textSize="50px" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

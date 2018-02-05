@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffdd00"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="TA的需求详情"
+            android:textColor="#333333"
+            android:textSize="60px" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="40px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <com.freak.shopping.custom.CircleImageView
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+                        android:background="@drawable/tx1" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/post_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="恋恋baby"
+                        android:layout_marginLeft="40px"
+                        android:textColor="#333333"
+                        android:textSize="50px" />
+
+                    <ImageView
+
+                        android:id="@+id/dt"
+                        android:layout_width="30px"
+                        android:layout_height="60px"
+                        android:layout_marginLeft="40px"
+                        android:layout_below="@+id/post_name"
+                        android:layout_marginTop="20px"
+                        />
+
+                    <TextView
+                        android:id="@+id/post_jl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/post_name"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginTop="20px"
+                        android:layout_toRightOf="@id/dt"
+                        android:text="1.5km"
+                        android:textColor="#333333"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="150px"
+                        android:layout_height="60px"
+                        android:layout_marginLeft="40px"
+                        android:layout_toRightOf="@+id/post_name"
+                        android:background="@drawable/demand_text_view"
+                        android:gravity="center"
+                        android:paddingLeft="30px"
+                        android:text="23"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="13dp"
+                        android:layout_marginRight="13dp"
+                        android:text="已应邀"
+                        android:textColor="#ff6600"
+                        android:textSize="50px" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#b5b5b5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="认证"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|end">
+
+                    <ImageView
+                        android:layout_width="80px"
+                        android:layout_height="100px"
+                        />
+
+                    <ImageView
+                        android:layout_width="80px"
+                        android:layout_height="100px"
+                        />
+
+                    <ImageView
+                        android:layout_width="80px"
+                        android:layout_height="100px"
+                         />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="服务品类"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:text="逛商场"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#b5b5b5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="预约时间"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:text="2017-07-03 20:00"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#b5b5b5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="结束时间"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:text="2017-07-03 20:00"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#b5b5b5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="性别要求"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:text="女"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#b5b5b5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:paddingLeft="40px"
+                android:paddingRight="40px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="服务方式"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:text="我到游戏玩家那里去"
+                    android:textColor="#333333"
+                    android:textSize="40px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#b5b5b5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="40px"
+                android:paddingTop="40px">
+
+                <TextView
+                    android:layout_width="950px"
+                    android:layout_height="120px"
+                    android:background="@drawable/text_view_huang"
+                    android:gravity="center"
+                    android:text="发消息"
+                    android:textColor="#333333"
+                    android:textSize="50px" />
+
+                <TextView
+                    android:layout_width="950px"
+                    android:layout_height="120px"
+                    android:layout_marginTop="50px"
+                    android:background="@drawable/text_view_hui"
+                    android:gravity="center"
+                    android:text="要评价"
+                    android:textColor="#333333"
+                    android:textSize="50px" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

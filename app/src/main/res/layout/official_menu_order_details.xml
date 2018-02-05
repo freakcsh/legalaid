@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20px">
+
+        <com.freak.shopping.custom.CircleImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40px"
+            android:background="@drawable/tx11" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:gravity="center|left"
+            android:text="水果捞夏日活动"
+            android:textColor="#333333"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+      />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="合计"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="￥188"
+            android:textColor="#ff6600"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="#f5f5f5" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="订单号"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="2"
+            android:gravity="center|right"
+            android:text="15616564456"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="下单时间"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="2"
+            android:gravity="center|right"
+            android:text="2017.07.13 20:00"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="下单人名字"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="2"
+            android:gravity="center|right"
+            android:text="李小龙"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="下单人手机号"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="13538582258"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="订单状态"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40px"
+            android:layout_weight="2"
+            android:gravity="center|right"
+            android:text="已付款"
+            android:textColor="#666666"
+            android:textSize="40px" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="#f5f5f5"
+        android:layout_marginBottom="200px"/>
+
+</LinearLayout>
