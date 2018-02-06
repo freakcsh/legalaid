@@ -1,5 +1,6 @@
 package com.freak.legalaid.library.base;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,9 +25,10 @@ public abstract class BaseActivity extends SupportActivity implements BaseView{
     protected abstract int getLayout();
 
     protected abstract void initEventAndData();
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }

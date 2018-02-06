@@ -1,11 +1,13 @@
 package com.freak.legalaid.library.base;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 
 import com.freak.legalaid.app.App;
 
@@ -22,6 +24,7 @@ public abstract class SimpleActivity extends SupportActivity {
 
     protected Activity mContext;
     private Unbinder mUnBinder;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,11 +58,12 @@ public abstract class SimpleActivity extends SupportActivity {
         }
     }
 
-    public void backOnclick(View view){
+    public void backOnclick(View view) {
         finish();
     }
 
     protected abstract int getLayout();
+
     protected abstract void initEventAndData();
 //
 //    public void toastShow(int resId) {

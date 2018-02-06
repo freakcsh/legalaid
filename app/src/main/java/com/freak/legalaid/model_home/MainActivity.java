@@ -1,9 +1,11 @@
 package com.freak.legalaid.model_home;
 
+import android.app.ActionBar;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.Window;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -40,17 +42,20 @@ public class MainActivity extends SimpleActivity implements BottomNavigationBar.
         fm = MainActivity.this.getSupportFragmentManager();
         transaction = fm.beginTransaction();
         mHomeFragment = new HomeFragment();
-        transaction.add(R.id.fl_layout, mHomeFragment, "");
-        transaction.commit();
-        mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.home, "首页").setActiveColorResource(R.color.color_blue))
-                .addItem(new BottomNavigationItem(R.drawable.legal, "法律知识").setActiveColorResource(R.color.key_gray))
-                .addItem(new BottomNavigationItem(R.drawable.demand, "需求").setActiveColorResource(R.color.loginGreenColor))
-                .addItem(new BottomNavigationItem(R.drawable.setting, "设置").setActiveColorResource(R.color.red))
+        mBottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
+        mBottomNavigationBar
+                .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC
+                );
+        mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_home_white_24dp, "首页").setActiveColorResource(R.color.orange))
+                .addItem(new BottomNavigationItem(R.drawable.legal, "法律知识").setActiveColorResource(R.color.teal))
+                .addItem(new BottomNavigationItem(R.drawable.demand, "需求").setActiveColorResource(R.color.blue))
+                .addItem(new BottomNavigationItem(R.drawable.setting, "设置").setActiveColorResource(R.color.colorPrimary))
                 .setFirstSelectedPosition(0)
                 .initialise();
-        mBottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
-        mBottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE);
+
         mBottomNavigationBar.setTabSelectedListener(this);
+        transaction.add(R.id.fl_layout, mHomeFragment, "");
+        transaction.commit();
         //http://blog.csdn.net/qq_16131393/article/details/51419901
     }
 
