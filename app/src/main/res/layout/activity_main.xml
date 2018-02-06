@@ -17,9 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textAlignment="center"
-        app:bnbBackgroundStyle="background_style_ripple"
-        app:bnbMode="mode_fixed"
-        app:bnbActiveColor="@color/colorPrimary"
         />
 
 </LinearLayout>

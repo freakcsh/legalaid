@@ -42,12 +42,14 @@ public class MainActivity extends SimpleActivity implements BottomNavigationBar.
         mHomeFragment = new HomeFragment();
         transaction.add(R.id.fl_layout, mHomeFragment, "");
         transaction.commit();
-        mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.news, "首页"))
-                .addItem(new BottomNavigationItem(R.drawable.news, "法律知识"))
-                .addItem(new BottomNavigationItem(R.drawable.news, "需求"))
-                .addItem(new BottomNavigationItem(R.drawable.news, "设置"))
+        mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.home, "首页").setActiveColorResource(R.color.color_blue))
+                .addItem(new BottomNavigationItem(R.drawable.legal, "法律知识").setActiveColorResource(R.color.key_gray))
+                .addItem(new BottomNavigationItem(R.drawable.demand, "需求").setActiveColorResource(R.color.loginGreenColor))
+                .addItem(new BottomNavigationItem(R.drawable.setting, "设置").setActiveColorResource(R.color.red))
                 .setFirstSelectedPosition(0)
                 .initialise();
+        mBottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
+        mBottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE);
         mBottomNavigationBar.setTabSelectedListener(this);
         //http://blog.csdn.net/qq_16131393/article/details/51419901
     }
