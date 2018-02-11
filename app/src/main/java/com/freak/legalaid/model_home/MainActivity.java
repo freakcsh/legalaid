@@ -42,9 +42,10 @@ public class MainActivity extends SimpleActivity implements BottomNavigationBar.
         fm = MainActivity.this.getSupportFragmentManager();
         transaction = fm.beginTransaction();
         mHomeFragment = new HomeFragment();
+        //设置BottomNavigationBar的mode
         mBottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
-        mBottomNavigationBar
-                .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC
+        //设置BottomNavigationBar的样式style
+        mBottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC
                 );
         mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_home_white_24dp, "首页").setActiveColorResource(R.color.orange))
                 .addItem(new BottomNavigationItem(R.drawable.legal, "法律知识").setActiveColorResource(R.color.teal))
@@ -57,6 +58,7 @@ public class MainActivity extends SimpleActivity implements BottomNavigationBar.
         transaction.add(R.id.fl_layout, mHomeFragment, "");
         transaction.commit();
         //http://blog.csdn.net/qq_16131393/article/details/51419901
+
     }
 
 
