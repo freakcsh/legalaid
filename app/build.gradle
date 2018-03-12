@@ -31,33 +31,32 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'com.jakewharton:butterknife:8.5.1'
-//    compile 'com.google.code.gson:gson:2.2.4'
+    //    compile 'com.google.code.gson:gson:2.2.4'
     //Fragment
     compile 'me.yokeyword:fragmentation:0.10.1'
     //rxJava
     compile 'io.reactivex:rxjava:1.1.6'
     //rxAndroid
     compile 'io.reactivex:rxandroid:1.1.0'
-
     //以下SDK开发者请根据需要自行选择
     //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
     //3.5.5：请务必查看下面注释[1]
-//    compile 'cn.bmob.android:bmob-sdk:3.5.5'
-
+    //    compile 'cn.bmob.android:bmob-sdk:3.5.5'
     //bmob-push：Bmob的推送包
-//    compile 'cn.bmob.android:bmob-push:0.8'
-
+    //    compile 'cn.bmob.android:bmob-push:0.8'
     //bmob-im：Bmob的即时通讯包，注意每个版本的im依赖特定版本的bmob-sdk，具体的依赖关系可查看下面注释[2]
-//    compile 'cn.bmob.android:bmob-im:2.0.5@aar'
-//    compile 'cn.bmob.android:bmob-sdk:3.4.7-aar'
-
+    //    compile 'cn.bmob.android:bmob-im:2.0.5@aar'
+    //    compile 'cn.bmob.android:bmob-sdk:3.4.7-aar'
     //bmob-sms ：Bmob单独为短信服务提供的包
-//    compile 'cn.bmob.android:bmob-sms:1.0.1'
-
+    //    compile 'cn.bmob.android:bmob-sms:1.0.1'
     //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
-//    compile 'cn.bmob.android:http-legacy:1.0'
-//底部导航栏
+    //    compile 'cn.bmob.android:http-legacy:1.0'
+    //底部导航栏
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.3'
+    compile files('libs/jsoup-1.11.2.jar')
+    //Magic指示器
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
 
+    compile 'com.android.support:design:26.0.0-alpha1'
 
 }
