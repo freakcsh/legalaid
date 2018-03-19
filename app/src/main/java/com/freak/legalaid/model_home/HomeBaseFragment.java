@@ -20,6 +20,7 @@ public abstract class HomeBaseFragment extends Fragment {
         prepareFetchData();
     }
 
+
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);

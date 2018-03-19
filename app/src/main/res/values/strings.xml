@@ -14,4 +14,18 @@
         <item>财经</item>
         <item>时尚</item>
     </string-array>
+
+    <string-array name="legal_type_cn">
+        <item>赔偿法</item>
+        <item>债务纠纷</item>
+        <item>刑法</item>
+        <item>财税法</item>
+        <item>民商法</item>
+        <item>物权法</item>
+        <item>建筑工程纠纷</item>
+        <item>保险法</item>
+        <item>国际法</item>
+        <item>诉讼法</item>
+        <item>法律知识专题</item>
+    </string-array>
 </resources>

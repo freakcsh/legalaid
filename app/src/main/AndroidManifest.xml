@@ -33,7 +33,7 @@
         <activity android:name=".model_home.LoginActivity" />
         <activity android:name=".model_demand.DemandActivity" />
         <activity android:name=".model_information.InformationActivity" />
-        <activity android:name=".model_lagal_aid_knowledge.LegalAidKnowledge"/>
+        <activity android:name=".model_lagal_aid_knowledge.LegalAidKnowledgeActivity"/>
     </application>
 
 </manifest>

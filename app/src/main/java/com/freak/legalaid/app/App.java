@@ -5,6 +5,8 @@ import android.app.Application;
 
 import com.freak.legalaid.library.base.BaseActivity;
 
+import org.litepal.LitePal;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -40,10 +42,10 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         instance=this;
-
+        LitePal.initialize(this);
     }
 
-    //##################################### 以下是activity的收集 ####################################
+    //##################################### 以下是activity的收litepal.xml集 ####################################
     public void addActivity(Activity act) {
         if (allActivities == null) {
             allActivities = new HashSet<>();
