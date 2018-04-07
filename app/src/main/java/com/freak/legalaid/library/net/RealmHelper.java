@@ -1,9 +1,14 @@
 package com.freak.legalaid.library.net;
 
+import android.util.Log;
+
 import com.freak.legalaid.bean.LegalAidBean;
+import com.freak.legalaid.bean.LoginCommonUserBean;
+import com.freak.legalaid.bean.LoginLawyerUserBean;
 
 import org.litepal.crud.DataSupport;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,6 +16,11 @@ import java.util.List;
  */
 
 public class RealmHelper {
+
+
+    private List<LoginCommonUserBean> loginCommonUserBeanList;
+    private List<LoginLawyerUserBean> loginLawyerUserBeanList;
+
     public RealmHelper() {
     }
 
@@ -31,6 +41,70 @@ public class RealmHelper {
     public List<LegalAidBean> selectAllCompensate(String type) {
         List<LegalAidBean> all = DataSupport.where("type = ?", type).find(LegalAidBean.class);
         return all;
+    }
+
+    /**
+     * 查询用户是否存在
+     *
+     * @param userName 用户名
+     * @return 返回结果
+     */
+    public boolean selectCommonUser(String userName) {
+        loginCommonUserBeanList = DataSupport.where( "userName = ?", userName).find(LoginCommonUserBean.class);
+        Log.e("freak","查询普通用户表的数据："+ loginCommonUserBeanList.toString());
+            if (loginCommonUserBeanList.size()!=0){
+                return true;
+            }else {
+                return false;
+            }
+
+    }
+
+    /**
+     * 查询律师用户表信息
+     * @param userName 用户名
+     * @return 返回值
+     */
+    public boolean selectLawyerUser(String userName){
+        loginLawyerUserBeanList = DataSupport.where( "userName = ?", userName).find(LoginLawyerUserBean.class);
+        Log.e("freak","查询律师用户表的数据："+ loginLawyerUserBeanList.toString());
+            if (loginLawyerUserBeanList.size()!=0){
+                return true;
+            }else {
+                return false;
+            }
+
+    }
+    /**
+     * 保存注册的用户
+     * @param type 用户类型
+     * @param userName 用户名
+     * @param password 用户密码
+     */
+    public void addUserLogin(String type, String userName, String password) {
+        if ("common".equals(type)){
+            LoginCommonUserBean commonUserBean = null;
+            List<LoginCommonUserBean> userBeanList = new ArrayList<>();
+            userBeanList.clear();
+            commonUserBean = new LoginCommonUserBean();
+            commonUserBean.setType(type);
+            commonUserBean.setUserName(userName);
+            commonUserBean.setPassword(password);
+            userBeanList.add(commonUserBean);
+            DataSupport.saveAll(userBeanList);
+            Log.e("freak","保存普通用户表之后查询数据："+DataSupport.findAll(LoginCommonUserBean.class).toString());
+        }else if ("lawyer".equals(type)){
+        LoginLawyerUserBean lawyerUserBean=null;
+        List<LoginLawyerUserBean> loginLawyerUserBeanList=new ArrayList<>();
+        loginLawyerUserBeanList.clear();
+        lawyerUserBean.setType(type);
+        lawyerUserBean.setUserName(userName);
+        lawyerUserBean.setPassword(password);
+        loginLawyerUserBeanList.add(lawyerUserBean);
+        DataSupport.saveAll(loginLawyerUserBeanList);
+        Log.e("freak","保存律师用户表之后查询数据："+DataSupport.findAll(LoginLawyerUserBean.class).toString());
+        }
+
     }
 
 //    /**

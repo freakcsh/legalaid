@@ -17,6 +17,9 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.freak.legalaid.R;
 import com.freak.legalaid.adapter.HomeDataAdapter;
+import com.freak.legalaid.bean.HomeDataBean;
+import com.freak.legalaid.library.net.HomeNewCallBack;
+import com.freak.legalaid.library.net.HomeNewClient;
 
 /**
  * Created by Administrator on 2018/2/25.
@@ -41,7 +44,7 @@ public class HomeDetailFragment extends HomeBaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View homeDetail = inflater.inflate(R.layout.home_detail_fragment, container, false);
         srl = homeDetail.findViewById(R.id.srl);
-        recyclerView=homeDetail.findViewById(R.id.recycler_view);
+        recyclerView = homeDetail.findViewById(R.id.recycler_view);
         homeDataAdapter = new HomeDataAdapter();
         homeDataAdapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
         /***************************设置下拉刷新**********************************/
@@ -83,7 +86,23 @@ public class HomeDetailFragment extends HomeBaseFragment {
 
     @Override
     public void fetchData() {
+        upData();
+    }
 
+    private void upData() {
+        srl.setRefreshing(true);
+        HomeNewClient.getInstance().getNewsData(type, new HomeNewCallBack<HomeDataBean>() {
+            @Override
+            public void onSuccess(HomeDataBean response, int id) {
+                homeDataAdapter.setNewData(response.getResult().getData());
+                srl.setRefreshing(false);
+            }
+
+            @Override
+            public void onError(Exception e, int id) {
+                srl.setRefreshing(false);
+            }
+        });
     }
 
     @Override

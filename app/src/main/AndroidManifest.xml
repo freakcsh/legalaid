@@ -23,17 +23,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".model_home.MainActivity">
+        <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".model_home.LoginActivity" />
+        <activity android:name=".model_home.MainActivity" />
         <activity android:name=".model_demand.DemandActivity" />
         <activity android:name=".model_information.InformationActivity" />
         <activity android:name=".model_lagal_aid_knowledge.LegalAidKnowledgeActivity"/>
+        <activity android:name=".login.ForgetPasswordActivity"/>
+        <activity android:name=".login.RegisterActivity"/>
     </application>
 
 </manifest>

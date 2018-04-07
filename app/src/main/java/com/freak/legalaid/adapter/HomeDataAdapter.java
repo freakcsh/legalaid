@@ -28,7 +28,7 @@ public class HomeDataAdapter extends BaseQuickAdapter<HomeDataBean.ResultBean.Da
         helper.addOnClickListener(R.id.ll_news_detail);
         Glide.with(mContext)
                 .load(item.getThumbnail_pic_s())
-                .placeholder(R.mipmap.icon)
+                .placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.ic_launcher)
                 .crossFade()
                 .centerCrop()

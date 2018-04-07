@@ -15,86 +15,116 @@
         android:layout_height="400px"
         android:gravity="center">
 
-        <ImageView
+        <com.pkmmte.view.CircularImageView
             android:id="@+id/login_img"
-            android:layout_width="200px"
-            android:layout_height="200px"
-            android:src="@drawable/timg4" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+          android:background="@drawable/timg1" />
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/login_phone"
-        android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_marginLeft="80px"
-        android:layout_marginRight="80px"
-        android:hint="手机号码"
-        android:textColorHint="#666666"
-        android:textColor="#666666"
-        android:background="@null"
-        android:inputType="phone"
-        android:textSize="40px" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="4px"
-        android:layout_marginLeft="80px"
-        android:layout_marginRight="80px"
-        android:background="#ffdd00" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+        <CheckBox
+            android:id="@+id/cb_user_lawyer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cart_selector"
+            android:button="@null"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="律师用户"
+            android:gravity="center"
+            android:layout_marginRight="40dp"/>
+        <CheckBox
+            android:id="@+id/cb_user_common"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cart_selector"
+            android:button="@null"
+            android:checked="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="普通用户"
+            />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/login_phone"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:hint="手机号码"
+        android:textColorHint="#666666"
+        android:textColor="#666666"
+        android:background="@drawable/login_background"
+        android:inputType="phone"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/login_background"
+        >
 
         <EditText
             android:id="@+id/login_password"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="80px"
             android:layout_weight="1"
             android:hint="输入密码"
             android:textColorHint="#666666"
             android:textColor="#666666"
+            android:layout_gravity="center"
             android:inputType="textPassword"
-            android:background="@null"
-            android:textSize="40px" />
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/login_password_show"
-            android:layout_width="80px"
-            android:layout_height="60px"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
-            android:layout_marginRight="80px"
             android:background="@mipmap/yanjing_kong" />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="4px"
-        android:layout_marginLeft="80px"
-        android:layout_marginRight="80px"
-        android:background="#666666" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300px"
-        android:gravity="center|bottom">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
         <TextView
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:id="@+id/login_btn"
-            android:layout_width="950px"
-            android:layout_height="120px"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:gravity="center"
             android:background="@drawable/text_view_huang"
             android:textColor="#333333"
-            android:textSize="50px"
-            android:layout_marginBottom="40px"/>
+            android:textSize="20sp"
+            android:text="登录"
+          />
     </LinearLayout>
 
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150px">
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp">
 
         <TextView
             android:id="@+id/login_forget_password"
@@ -151,17 +181,17 @@
             android:background="#bcbcbc" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/login_we_chat"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
         <ImageView
-            android:layout_width="150px"
-            android:layout_height="150px"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@mipmap/weixin_kui1"/>
         <TextView
-            android:id="@+id/login_we_chat"
-            android:layout_width="200px"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:text="微信"
             android:textSize="40px"

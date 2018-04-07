@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.3"
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.freak.legalaid"
         minSdkVersion 15
@@ -65,4 +65,9 @@ dependencies {
     //图片加载框架 Glide
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'org.litepal.android:core:1.6.1'
+    compile 'com.google.code.gson:gson:2.2.4'
+    //鸿洋大神封装的okhttpUtils
+    compile 'com.zhy:okhttputils:2.6.2'
+    //圆形头像
+    compile 'com.pkmmte.view:circularimageview:1.1'
 }
