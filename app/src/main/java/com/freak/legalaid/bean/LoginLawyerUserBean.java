@@ -14,6 +14,10 @@ public class LoginLawyerUserBean extends DataSupport implements Parcelable{
     private String phone;
     private String address;
 
+    public LoginLawyerUserBean() {
+
+    }
+
     protected LoginLawyerUserBean(Parcel in) {
         type = in.readString();
         userName = in.readString();
@@ -106,5 +110,18 @@ public class LoginLawyerUserBean extends DataSupport implements Parcelable{
         dest.writeString(age);
         dest.writeString(phone);
         dest.writeString(address);
+    }
+
+    @Override
+    public String toString() {
+        return "LoginLawyerUserBean{" +
+                "type='" + type + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age='" + age + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }

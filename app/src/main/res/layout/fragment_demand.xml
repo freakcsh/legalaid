@@ -1,13 +1,24 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:freak="http://schemas.android.com/apk/res-auto"
     tools:context="com.freak.legalaid.model_demand.DemandFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <com.freak.legalaid.custom.CustomImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_margin="10dp"
+        freak:src="@drawable/timg1"
+        freak:type="circle" />
+    <com.freak.legalaid.custom.CustomImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        freak:borderRadius="10dp"
+        freak:src="@drawable/timg"
+        freak:type="round" />
+
+</LinearLayout>

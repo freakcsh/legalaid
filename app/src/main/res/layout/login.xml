@@ -15,81 +15,85 @@
         android:layout_height="400px"
         android:gravity="center">
 
-        <com.pkmmte.view.CircularImageView
+        <ImageView
             android:id="@+id/login_img"
             android:layout_width="100dp"
             android:layout_height="100dp"
-          android:background="@drawable/timg1" />
+            android:background="@mipmap/ic_launcher" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:layout_marginBottom="10dp">
+        android:orientation="horizontal">
+
         <CheckBox
             android:id="@+id/cb_user_lawyer"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/cart_selector"
-            android:button="@null"
-            android:layout_marginRight="10dp"/>
+            android:button="@null" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="律师用户"
+            android:layout_marginRight="40dp"
             android:gravity="center"
-            android:layout_marginRight="40dp"/>
+            android:text="律师用户" />
+
         <CheckBox
             android:id="@+id/cb_user_common"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/cart_selector"
             android:button="@null"
-            android:checked="true"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="10dp"/>
+            android:checked="true" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="普通用户"
-            />
+            android:text="普通用户" />
     </LinearLayout>
+
     <EditText
         android:id="@+id/login_phone"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:hint="手机号码"
-        android:textColorHint="#666666"
-        android:textColor="#666666"
         android:background="@drawable/login_background"
+        android:hint="手机号码"
         android:inputType="phone"
+        android:textColor="#666666"
+        android:textColorHint="#666666"
         android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="43dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/login_background"
-        >
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/login_password"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:hint="输入密码"
-            android:textColorHint="#666666"
-            android:textColor="#666666"
-            android:layout_gravity="center"
             android:inputType="textPassword"
+            android:textColor="#666666"
+            android:textColorHint="#666666"
             android:textSize="18sp" />
 
         <ImageView
@@ -105,20 +109,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center">
+
         <TextView
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
             android:id="@+id/login_btn"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:background="@drawable/text_view_huang"
-            android:textColor="#333333"
-            android:textSize="20sp"
+            android:gravity="center"
             android:text="登录"
-          />
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </LinearLayout>
-
 
 
     <LinearLayout
@@ -162,8 +165,8 @@
         <View
             android:layout_width="250px"
             android:layout_height="4px"
-            android:background="#bcbcbc"
-            android:layout_marginLeft="100px"/>
+            android:layout_marginLeft="100px"
+            android:background="#bcbcbc" />
 
         <TextView
             android:layout_width="0dp"
@@ -180,22 +183,25 @@
             android:layout_marginRight="100px"
             android:background="#bcbcbc" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/login_we_chat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
+
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@mipmap/weixin_kui1"/>
+            android:background="@mipmap/weixin_kui1" />
+
         <TextView
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:text="微信"
-            android:textSize="40px"
             android:gravity="center"
-            android:textColor="#999999"/>
+            android:text="微信"
+            android:textColor="#999999"
+            android:textSize="40px" />
     </LinearLayout>
 </LinearLayout>

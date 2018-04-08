@@ -5,7 +5,6 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.freak.legalaid.R;
@@ -19,12 +18,14 @@ import java.util.regex.Pattern;
 public class RegisterActivity extends BaseActivity implements View.OnClickListener {
     private EditText registerPhone, registerPassword, edtReRegisterPassword;
     private TextView registerBtn;
-    private ImageView btnReturn;
+    private TextView tvReturn;
     private TextView titleName;
     private boolean aBoolean;
     private RealmHelper mRealmHelper;
     private CheckBox cbRegisterCommon, cbRegisterLawyer;
     private String type;
+    private boolean selectCommonUser;
+    private boolean selectLawyerUser;
 
     @Override
     protected int getLayout() {
@@ -37,13 +38,13 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         registerPassword = findViewById(R.id.register_password);
         edtReRegisterPassword = findViewById(R.id.edt_re_register_password);
         registerBtn = findViewById(R.id.register_btn);
-        btnReturn = findViewById(R.id.title_return);
+        tvReturn = findViewById(R.id.title_return);
         titleName = findViewById(R.id.title_name);
         cbRegisterLawyer = findViewById(R.id.cb_register_lawyer);
         cbRegisterCommon = findViewById(R.id.cb_register_common);
 
         titleName.setText("注册");
-        btnReturn.setOnClickListener(this);
+        tvReturn.setOnClickListener(this);
         registerBtn.setOnClickListener(this);
         mRealmHelper = new RealmHelper();
         /***
@@ -111,9 +112,26 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     if (cbRegisterLawyer.isChecked()) {
                         type = "lawyer";
                     }
-                    mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), registerPassword.getText().toString().trim());
-                    ToastUtil.shortShow("注册成功");
-                    finish();
+                    if ("common".equals(type)) {
+                        selectCommonUser = mRealmHelper.selectCommonUser(registerPhone.getText().toString().trim());
+                        if (selectCommonUser) {
+                            ToastUtil.shortShow("用户已经注册过，请直接进行登录。");
+                        } else {
+                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), registerPassword.getText().toString().trim());
+                            ToastUtil.shortShow("注册成功");
+                            finish();
+                        }
+                    } else if ("lawyer".equals(type)) {
+                        selectLawyerUser = mRealmHelper.selectLawyerUser(registerPhone.getText().toString().trim());
+                        if (selectLawyerUser) {
+                            ToastUtil.shortShow("用户已经注册过，请直接进行登录。");
+                        } else {
+                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), registerPassword.getText().toString().trim());
+                            ToastUtil.shortShow("注册成功");
+                            finish();
+                        }
+                    }
+
 
                 } else {
                     ToastUtil.shortShow("两次密码不一致。");
