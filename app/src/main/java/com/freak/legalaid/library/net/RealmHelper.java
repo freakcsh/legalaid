@@ -89,29 +89,71 @@ public class RealmHelper {
      * @param userName 用户名
      * @param password 用户密码
      */
-    public void addUserLogin(String type, String userName, String password) {
+    public void addUserLogin(String type, String userName,String realName, String password,String sex,String age,String phone,String address) {
         if ("common".equals(type)) {
             LoginCommonUserBean commonUserBean = null;
             List<LoginCommonUserBean> userBeanList = new ArrayList<>();
-            userBeanList.clear();
-            commonUserBean = new LoginCommonUserBean();
-            commonUserBean.setType(type);
-            commonUserBean.setUserName(userName);
-            commonUserBean.setPassword(password);
-            userBeanList.add(commonUserBean);
-            DataSupport.saveAll(userBeanList);
-            Log.e("freak", "保存普通用户表之后查询数据：" + DataSupport.findAll(LoginCommonUserBean.class).toString());
+            if (selectCommonUser(userName)){
+                userBeanList.clear();
+                LoginCommonUserBean loginCommonUserBean = DataSupport.where("userName = ?", userName).findFirst(LoginCommonUserBean.class);
+                loginCommonUserBean.setType(type);
+                loginCommonUserBean.setUserName(userName);
+                loginCommonUserBean.setRealName(realName);
+                loginCommonUserBean.setPassword(password);
+                loginCommonUserBean.setSex(sex);
+                loginCommonUserBean.setAge(age);
+                loginCommonUserBean.setPhone(phone);
+                loginCommonUserBean.setAddress(address);
+                userBeanList.add(loginCommonUserBean);
+                DataSupport.saveAll(userBeanList);
+                Log.e("freak", "更改普通用户表之后查询数据：" + DataSupport.findAll(LoginCommonUserBean.class).toString());
+            }else {
+                commonUserBean = new LoginCommonUserBean();
+                commonUserBean.setType(type);
+                commonUserBean.setUserName(userName);
+                commonUserBean.setRealName(realName);
+                commonUserBean.setPassword(password);
+                commonUserBean.setSex(sex);
+                commonUserBean.setAge(age);
+                commonUserBean.setPhone(phone);
+                commonUserBean.setAddress(address);
+                userBeanList.add(commonUserBean);
+                DataSupport.saveAll(userBeanList);
+                Log.e("freak", "保存普通用户表之后查询数据：" + DataSupport.findAll(LoginCommonUserBean.class).toString());
+            }
+
         } else if ("lawyer".equals(type)) {
             LoginLawyerUserBean lawyerUserBean = null;
             List<LoginLawyerUserBean> loginLawyerUserBeanList = new ArrayList<>();
-            loginLawyerUserBeanList.clear();
-            lawyerUserBean = new LoginLawyerUserBean();
-            lawyerUserBean.setType(type);
-            lawyerUserBean.setUserName(userName);
-            lawyerUserBean.setPassword(password);
-            loginLawyerUserBeanList.add(lawyerUserBean);
-            DataSupport.saveAll(loginLawyerUserBeanList);
-            Log.e("freak", "保存律师用户表之后查询数据：" + DataSupport.findAll(LoginLawyerUserBean.class).toString());
+            if (selectLawyerUser(userName)){
+                loginLawyerUserBeanList.clear();
+                LoginLawyerUserBean loginLawyerUserBean = DataSupport.where("userName = ?", userName).findFirst(LoginLawyerUserBean.class);
+                loginLawyerUserBean.setType(type);
+                loginLawyerUserBean.setUserName(userName);
+                loginLawyerUserBean.setRealName(realName);
+                loginLawyerUserBean.setPassword(password);
+                loginLawyerUserBean.setSex(sex);
+                loginLawyerUserBean.setAge(age);
+                loginLawyerUserBean.setPhone(phone);
+                loginLawyerUserBean.setAddress(address);
+                loginLawyerUserBeanList.add(loginLawyerUserBean);
+                DataSupport.saveAll(loginLawyerUserBeanList);
+                Log.e("freak", "更改律师用户表之后查询数据：" + DataSupport.findAll(LoginLawyerUserBean.class).toString());
+            }else {
+                lawyerUserBean = new LoginLawyerUserBean();
+                lawyerUserBean.setType(type);
+                lawyerUserBean.setUserName(userName);
+                lawyerUserBean.setRealName(realName);
+                lawyerUserBean.setPassword(password);
+                lawyerUserBean.setSex(sex);
+                lawyerUserBean.setAge(age);
+                lawyerUserBean.setPhone(phone);
+                lawyerUserBean.setAddress(address);
+                loginLawyerUserBeanList.add(lawyerUserBean);
+                DataSupport.saveAll(loginLawyerUserBeanList);
+                Log.e("freak", "保存律师用户表之后查询数据：" + DataSupport.findAll(LoginLawyerUserBean.class).toString());
+            }
+
         }
 
     }

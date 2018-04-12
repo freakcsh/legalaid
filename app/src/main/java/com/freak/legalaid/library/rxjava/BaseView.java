@@ -1,4 +1,4 @@
-package com.freak.legalaid.library.base;
+package com.freak.legalaid.library.rxjava;
 
 /**
  * Created by Administrator on 2018/2/4.

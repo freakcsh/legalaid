@@ -4,13 +4,31 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary">
     <include
         layout="@layout/title"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="编辑"
+        android:layout_marginRight="20dp"/>
+
+</LinearLayout>
+
 
     <LinearLayout
+        android:id="@+id/ll_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -29,12 +47,13 @@
                 android:textColor="#333333"
                 android:textSize="40px" />
 
-            <com.freak.shopping.custom.CircleImageView
+            <ImageView
+                android:id="@+id/img_image"
                 android:layout_width="120px"
                 android:layout_height="120px"
                 android:layout_gravity="center|right"
                 android:layout_marginRight="40px"
-                android:background="@drawable/tx" />
+                android:src="@drawable/tx" />
 
             <ImageView
                 android:layout_width="30px"
@@ -65,7 +84,8 @@
             android:textColor="#333333"
             android:textSize="40px" />
 
-        <TextView
+        <EditText
+            android:id="@+id/edt_user_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="88px"
@@ -80,7 +100,37 @@
         android:layout_width="match_parent"
         android:layout_height="8px"
         android:background="#f5f5f5" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
 
+        <TextView
+            android:id="@+id/tv_real_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="真实姓名"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <EditText
+            android:id="@+id/edt_real_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="88px"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="恋恋baby"
+            android:textColor="#333333"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8px"
+        android:background="#f5f5f5" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150px">
@@ -95,7 +145,8 @@
             android:textColor="#333333"
             android:textSize="40px" />
 
-        <TextView
+        <EditText
+            android:id="@+id/edt_age"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="88px"
@@ -110,7 +161,36 @@
         android:layout_width="match_parent"
         android:layout_height="8px"
         android:background="#f5f5f5" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80px"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="性别"
+            android:textColor="#333333"
+            android:textSize="40px" />
+
+        <EditText
+            android:id="@+id/edt_sex"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="88px"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:text="男"
+            android:textColor="#333333"
+            android:textSize="40px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8px"
+        android:background="#f5f5f5" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150px">
@@ -125,7 +205,8 @@
             android:textColor="#333333"
             android:textSize="40px" />
 
-        <TextView
+        <EditText
+            android:id="@+id/edt_address"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="20px"
@@ -158,17 +239,18 @@
             android:layout_marginLeft="80px"
             android:layout_weight="1"
             android:gravity="center|left"
-            android:text="兴趣爱好"
+            android:text="电话"
             android:textColor="#333333"
             android:textSize="40px" />
 
-        <TextView
+        <EditText
+            android:id="@+id/det_phone"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="88px"
             android:layout_weight="1"
             android:gravity="center|right"
-            android:text="逛街，吃饭"
+            android:text="13538582258"
             android:textColor="#333333"
             android:textSize="40px" />
     </LinearLayout>
@@ -179,6 +261,7 @@
         android:background="#f5f5f5" />
 
     <LinearLayout
+        android:id="@+id/ll_password"
         android:layout_width="match_parent"
         android:layout_height="150px">
 
@@ -216,5 +299,7 @@
         android:layout_height="8px"
         android:background="#f5f5f5" />
 
-    <include layout="@layout/text_view_huang" />
+    <include
+        android:id="@+id/btn_commit"
+        layout="@layout/text_view_huang" />
 </LinearLayout>

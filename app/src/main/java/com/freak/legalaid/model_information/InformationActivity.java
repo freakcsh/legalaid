@@ -1,10 +1,10 @@
 package com.freak.legalaid.model_information;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.freak.legalaid.R;
 import com.freak.legalaid.library.base.BaseActivity;
+import com.freak.legalaid.library.rxjava.BasePresenter;
 
 public class InformationActivity extends BaseActivity {
 
@@ -16,6 +16,11 @@ public class InformationActivity extends BaseActivity {
     @Override
     protected void initEventAndData() {
 
+    }
+
+    @Override
+    protected BasePresenter createPresenter() {
+        return null;
     }
 
     @Override

@@ -18,13 +18,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.freak.legalaid.R;
+import com.freak.legalaid.app.Constants;
 import com.freak.legalaid.bean.ImageBean;
 import com.freak.legalaid.bean.LoginCommonUserBean;
 import com.freak.legalaid.bean.LoginLawyerUserBean;
 import com.freak.legalaid.imageloader.GlideImageLoader;
 import com.freak.legalaid.library.base.BaseActivity;
 import com.freak.legalaid.library.net.RealmHelper;
+import com.freak.legalaid.library.rxjava.BasePresenter;
 import com.freak.legalaid.model_home.MainActivity;
+import com.freak.legalaid.utils.SPUtils;
 import com.freak.legalaid.utils.ToastUtil;
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.bean.ImageItem;
@@ -112,6 +115,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         setImage();
 
 
+    }
+
+    @Override
+    protected BasePresenter createPresenter() {
+        return null;
     }
 
     private void setImage() {
@@ -277,6 +285,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                             loginIntent.setClass(LoginActivity.this, MainActivity.class);
                             startActivity(loginIntent);
                             ToastUtil.shortShow("登录成功");
+                            SPUtils.put(this, Constants.TYPE,type);
+                            String o = (String) SPUtils.get(this, Constants.USERNAME, "");
+                            if (TextUtils.isEmpty(o)){
+                                SPUtils.put(this,Constants.USERNAME,commonUserName);
+                            }
+                            SPUtils.put(this,Constants.REAL_M_HELPER_USERNAME,commonUserName);
                             finish();
                         } else {
                             ToastUtil.shortShow("密码不正确，请重新输入。");

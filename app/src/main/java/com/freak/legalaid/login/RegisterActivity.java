@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.freak.legalaid.R;
 import com.freak.legalaid.library.base.BaseActivity;
 import com.freak.legalaid.library.net.RealmHelper;
+import com.freak.legalaid.library.rxjava.BasePresenter;
 import com.freak.legalaid.utils.ToastUtil;
 
 import java.util.regex.Matcher;
@@ -76,6 +77,11 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     }
 
     @Override
+    protected BasePresenter createPresenter() {
+        return null;
+    }
+
+    @Override
     public void showError(String msg) {
 
     }
@@ -117,7 +123,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                         if (selectCommonUser) {
                             ToastUtil.shortShow("用户已经注册过，请直接进行登录。");
                         } else {
-                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), registerPassword.getText().toString().trim());
+                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), null, registerPassword.getText().toString().trim(), null, null, null, null);
                             ToastUtil.shortShow("注册成功");
                             finish();
                         }
@@ -126,7 +132,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                         if (selectLawyerUser) {
                             ToastUtil.shortShow("用户已经注册过，请直接进行登录。");
                         } else {
-                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), registerPassword.getText().toString().trim());
+                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), null, registerPassword.getText().toString().trim(), null, null, null, null);
                             ToastUtil.shortShow("注册成功");
                             finish();
                         }

@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.freak.legalaid.R;
 import com.freak.legalaid.library.base.BaseActivity;
+import com.freak.legalaid.library.rxjava.BasePresenter;
 
 public class DemandActivity extends BaseActivity {
 
@@ -15,6 +16,11 @@ public class DemandActivity extends BaseActivity {
     @Override
     protected void initEventAndData() {
 
+    }
+
+    @Override
+    protected BasePresenter createPresenter() {
+        return null;
     }
 
     @Override

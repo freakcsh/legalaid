@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.freak.legalaid.library.rxjava.BasePresenter;
+import com.freak.legalaid.library.rxjava.BaseView;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportFragment;
@@ -17,7 +20,7 @@ import me.yokeyword.fragmentation.SupportFragment;
  * MVP Fragment基类
  */
 
-public abstract class BaseFragment<T extends BasePresenter>  extends SupportFragment implements BaseView{
+public abstract class BaseFragment<T extends BasePresenter>  extends SupportFragment implements BaseView {
     protected T mPresenter;
     protected View mView;
     protected Activity mActivity;

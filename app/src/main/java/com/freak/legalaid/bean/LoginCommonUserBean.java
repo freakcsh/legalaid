@@ -8,6 +8,7 @@ import org.litepal.crud.DataSupport;
 public class LoginCommonUserBean extends DataSupport implements Parcelable{
     private String type;
     private String userName;
+    private String realName;
     private String password;
     private String sex;
     private String age;
@@ -17,9 +18,11 @@ public class LoginCommonUserBean extends DataSupport implements Parcelable{
     public LoginCommonUserBean() {
     }
 
-    public LoginCommonUserBean(Parcel in) {
+
+    protected LoginCommonUserBean(Parcel in) {
         type = in.readString();
         userName = in.readString();
+        realName = in.readString();
         password = in.readString();
         sex = in.readString();
         age = in.readString();
@@ -38,6 +41,14 @@ public class LoginCommonUserBean extends DataSupport implements Parcelable{
             return new LoginCommonUserBean[size];
         }
     };
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
 
     public String getType() {
         return type;
@@ -116,6 +127,7 @@ public class LoginCommonUserBean extends DataSupport implements Parcelable{
         return "LoginCommonUserBean{" +
                 "type='" + type + '\'' +
                 ", userName='" + userName + '\'' +
+                ", realName='" + realName + '\'' +
                 ", password='" + password + '\'' +
                 ", sex='" + sex + '\'' +
                 ", age='" + age + '\'' +

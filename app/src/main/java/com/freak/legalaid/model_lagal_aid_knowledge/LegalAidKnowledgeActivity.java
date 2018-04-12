@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.freak.legalaid.R;
 import com.freak.legalaid.library.base.BaseActivity;
+import com.freak.legalaid.library.rxjava.BasePresenter;
 
 public class LegalAidKnowledgeActivity extends BaseActivity {
     private Toolbar toolbar;
@@ -41,6 +42,12 @@ public class LegalAidKnowledgeActivity extends BaseActivity {
         initWebViewClient();
         initWebChromeClient();
     }
+
+    @Override
+    protected BasePresenter createPresenter() {
+        return null;
+    }
+
     private void initWebChromeClient() {
         webView.setWebChromeClient(new WebChromeClient(){
             @Override

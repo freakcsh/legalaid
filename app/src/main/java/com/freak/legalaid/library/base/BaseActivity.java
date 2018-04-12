@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.freak.legalaid.app.App;
+import com.freak.legalaid.library.rxjava.BasePresenter;
+import com.freak.legalaid.library.rxjava.BaseView;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -19,16 +21,21 @@ import butterknife.Unbinder;
  * MVP activity基类
  */
 
-public abstract class BaseActivity extends SupportActivity implements BaseView{
+public abstract class BaseActivity<T extends BasePresenter> extends SupportActivity implements BaseView {
+    protected T mPresenter;
     protected Activity mActivity;
     private Unbinder mUnBinder;
     protected abstract int getLayout();
 
     protected abstract void initEventAndData();
+    protected abstract T createPresenter();
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-
+        /**
+         * 创建presenter对象
+         */
+        mPresenter = createPresenter();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
@@ -42,6 +49,9 @@ public abstract class BaseActivity extends SupportActivity implements BaseView{
         ActivityCollector.addActivity(this);
 
 
+        if (mPresenter != null) {
+            mPresenter.attachView(this);
+        }
 
         initEventAndData();
     }
@@ -57,9 +67,12 @@ public abstract class BaseActivity extends SupportActivity implements BaseView{
         super.onDestroy();
         ActivityCollector.removeActivity(this);
 
-//        if (mPresenter != null) {
-//            mPresenter.detachView();
-//        }
+        /**
+         * presenter 解除view订阅
+         */
+        if (mPresenter != null) {
+            mPresenter.detachView();
+        }
 
         mUnBinder.unbind();
         App.getInstance().removeActivity(this);
