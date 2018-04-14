@@ -21,5 +21,12 @@ public class Constants {
      */
 //    public static final String BASE_URL = "http://v.juhe.cn/";
     public static final String BASE_URL = "http://120.79.82.252";//远程
-
+    //公用对话框的提示
+    public static final String TIPS_TITLE = "tipsTitle";
+    public static final String TIPS_TEXT = "tipsText";
+    public static final String TIPS_HINT = "tipsHint";
+    public static final String TIPS_CANCEL = "tipsCancel";
+    public static final String TIPS_SUCCEED = "tipsSucceed";
+    public static final String TIPS_RIGHT = "text_right";
+    public static final String TIPS_TYPE = "text_type";
 }

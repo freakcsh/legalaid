@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar" />
+
+    <!--<com.freak.legalaid.custom.SpringView-->
+    <!--android:id="@+id/springview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--item   布局   item_account-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!--</ScrollView>-->
+    <!--</com.freak.legalaid.custom.SpringView>>-->
+</LinearLayout>

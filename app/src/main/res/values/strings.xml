@@ -28,4 +28,19 @@
         <item>诉讼法</item>
         <item>法律知识专题</item>
     </string-array>
+
+    <string-array name="common_type">
+        <item>已发布</item>
+        <item>待完成</item>
+        <item>已完成</item>
+        <item>已过期</item>
+    </string-array>
+
+    <string-array name="lawyer_type">
+        <item>待接单</item>
+        <item>已接单</item>
+        <item>已完成</item>
+    </string-array>
+
+    <string name="mine_account">我的账户</string>
 </resources>

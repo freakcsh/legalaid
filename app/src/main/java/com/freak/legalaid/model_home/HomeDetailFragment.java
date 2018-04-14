@@ -297,7 +297,7 @@ public class HomeDetailFragment extends HomeBaseFragment {
 
     @Override
     public void fetchData() {
-        upData();
+//        upData();
     }
 
     private void upData() {

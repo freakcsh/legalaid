@@ -19,4 +19,15 @@
     <color name="grey">#607D8B</color>
     <color name="orange">#F57C00</color>
 
+    <color name="appcolor">#FFDD00</color>
+    <color name="text_back">#333333</color>
+    <color name="dark_gray">#F5F5F5</color>
+    <color name="price">#FF6600</color>
+    <color name="deep_gray">#666666</color>
+    <color name="light_gray">#999999</color>
+    <color name="black">#ff000000</color>
+    <color name="colorTextHint">#c9c9c9</color>
+    <color name="colorGray">#ededed</color>
+    <color name="colorTextGray">#989898</color>
+
 </resources>

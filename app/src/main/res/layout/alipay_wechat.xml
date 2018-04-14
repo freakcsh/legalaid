@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20px"
+    android:layout_marginRight="20px"
+    android:layout_marginLeft="20px"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/ll_recharge_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/recharge_count_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="110px"
+            android:layout_marginLeft="10px"
+            android:gravity="center_vertical"
+            android:text="充值方式"
+            android:textSize="30px" />
+
+        <View
+            android:id="@+id/vie"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginTop="10px"
+            android:background="@color/dark_gray" />
+
+        <RelativeLayout
+            android:id="@+id/rl_recharge_count"
+            android:layout_width="match_parent"
+            android:layout_height="154px"
+            android:layout_marginTop="10px"
+            android:clickable="true"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/rl_recharge_count_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/zhifubao" />
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/rl_recharge_count_img"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/rl_recharge_count_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付宝"
+                    android:textColor="@color/text_back"
+                    android:textSize="34px" />
+
+                <TextView
+                    android:id="@+id/rl_recharge_count_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:text="大额支付、支持银行卡、信用卡"
+                    android:textColor="@color/light_gray"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <ImageView
+                android:id="@+id/img_alipay"
+                android:layout_width="44px"
+                android:layout_height="44px"
+                android:layout_alignParentRight="true"
+                android:layout_alignRight="@+id/rl_recharge_count_img"
+                android:layout_centerVertical="true"
+                android:background="@drawable/recharge_button_chooose" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/ve"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="10px"
+            android:background="@color/dark_gray" />
+
+        <RelativeLayout
+            android:id="@+id/rl_recharge_count2"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="154px"
+            android:layout_marginTop="10px">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/rl_recharge_count2_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:src="@mipmap/weixinzhifu" />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_centerVertical="true"
+                android:id="@+id/rl_recharge_count2_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/rl_recharge_count2_img"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/rl_recharge_count2_ll_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信支付"
+                    android:textColor="@color/text_back"
+                    android:textSize="34px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:text="安全支付、支持银行卡、信用卡"
+                    android:textColor="@color/light_gray"
+                    android:textSize="24px" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <ImageView
+                android:id="@+id/img_weixin"
+                android:layout_width="44px"
+                android:layout_height="44px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/gou_kui" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v3"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginBottom="30px"
+            android:layout_marginTop="10px"
+            android:background="@color/dark_gray" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</LinearLayout>

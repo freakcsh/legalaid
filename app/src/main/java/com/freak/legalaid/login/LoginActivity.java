@@ -286,6 +286,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                             startActivity(loginIntent);
                             ToastUtil.shortShow("登录成功");
                             SPUtils.put(this, Constants.TYPE,type);
+//                            ACache.get(this).put(Constants.TYPE,type);
                             String o = (String) SPUtils.get(this, Constants.USERNAME, "");
                             if (TextUtils.isEmpty(o)){
                                 SPUtils.put(this,Constants.USERNAME,commonUserName);
@@ -310,6 +311,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                             loginIntent.setClass(LoginActivity.this, MainActivity.class);
                             startActivity(loginIntent);
                             ToastUtil.shortShow("登录成功");
+                            SPUtils.put(this, Constants.TYPE,type);
+//                            ACache.get(this).put(Constants.TYPE,type);
+                            String o = (String) SPUtils.get(this, Constants.USERNAME, "");
+                            if (TextUtils.isEmpty(o)){
+                                SPUtils.put(this,Constants.USERNAME,commonUserName);
+                            }
+                            SPUtils.put(this,Constants.REAL_M_HELPER_USERNAME,commonUserName);
                             finish();
                         } else {
                             ToastUtil.shortShow("密码不正确，请重新输入。");

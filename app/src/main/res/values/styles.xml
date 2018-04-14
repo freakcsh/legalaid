@@ -7,4 +7,69 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorControlNormal">@android:color/white</item>
     </style>
+
+    <!-- SpingView-->
+    <declare-styleable name="SpringView">
+        <attr name="spingType">
+            <enum name="overlap" value="0"/>
+            <enum name="follow" value="1"/>
+        </attr>
+        <attr name="give">
+            <enum name="both" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="bottom" value="2"/>
+            <enum name="none" value="3"/>
+        </attr>
+        <attr name="header" format="reference"/>
+        <attr name="footer" format="reference"/>
+    </declare-styleable>
+
+    <style name="recharge_button_attr">
+        <item name="android:layout_width">150px</item>
+        <item name="android:layout_height">70px</item>
+        <item name="android:textSize">28px</item>
+        <item name="android:textColor">@color/text_back</item>
+    </style>
+
+    <style name="net_error_img">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <!--弹窗取消按钮-->
+    <style name="DialogCancelBtnStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_button_gray</item>
+        <item name="android:paddingBottom">8dp</item>
+        <!--<item name="android:paddingTop">8dp</item>-->
+        <item name="android:textColor">@color/colorTextGray</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+
+    <!--弹窗确定按钮-->
+    <style name="DialogConfirmBtnStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_button_normal</item>
+        <item name="android:paddingBottom">8dp</item>
+        <!--<item name="android:paddingTop">20dp</item>-->
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--自定义的优惠卷的对话框 这是不能外部点击-->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
 </resources>

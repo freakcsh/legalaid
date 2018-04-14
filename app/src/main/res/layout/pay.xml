@@ -5,10 +5,11 @@
     android:background="#ffffff"
     android:orientation="vertical">
 
-<include
-    layout="@layout/title"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"/>
+    <include
+        layout="@layout/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="350px"
@@ -105,13 +106,14 @@
             android:layout_width="match_parent"
             android:layout_height="150px"
             android:paddingLeft="40px">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:text="充值方式"
-                    android:textColor="#666666"
-                    android:textSize="40px" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="充值方式"
+                android:textColor="#666666"
+                android:textSize="40px" />
 
         </LinearLayout>
 
@@ -119,44 +121,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:padding="40px"
-            >
+            android:padding="40px">
 
             <ImageView
                 android:id="@+id/cz_zfb"
                 android:layout_width="150px"
                 android:layout_height="150px"
-                android:background="@mipmap/zhifubao"
-                android:layout_marginLeft="20px"/>
+                android:layout_marginLeft="20px"
+                android:background="@mipmap/zhifubao" />
+
             <TextView
                 android:id="@+id/cz_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="支付宝"
-                android:textSize="50px"
-                android:textColor="#333333"
-                android:layout_toRightOf="@id/cz_zfb"
-                android:layout_toEndOf="@id/cz_zfb"
                 android:layout_below="@id/cz_tv"
-                android:layout_marginLeft="50px"/>
+                android:layout_marginLeft="50px"
+                android:layout_toEndOf="@id/cz_zfb"
+                android:layout_toRightOf="@id/cz_zfb"
+                android:text="支付宝"
+                android:textColor="#333333"
+                android:textSize="50px" />
+
             <TextView
+                android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="大额支付、支持银行卡、信用卡"
-                android:textSize="40px"
-                android:textColor="#999999"
                 android:layout_alignBottom="@+id/cz_zfb"
                 android:layout_alignLeft="@+id/cz_tv"
                 android:layout_alignStart="@+id/cz_tv"
                 android:layout_marginBottom="20px"
-                android:id="@+id/textView12" />
+                android:text="大额支付、支持银行卡、信用卡"
+                android:textColor="#999999"
+                android:textSize="40px" />
+
             <CheckBox
-                android:layout_width="50px"
-                android:layout_height="50px"
-                android:layout_marginRight="12dp"
-                android:layout_centerVertical="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_centerVertical="true"
+                android:background="@drawable/cart_selector"
+                android:button="@null" />
         </RelativeLayout>
 
 
@@ -197,29 +202,30 @@
                 android:textSize="40px" />
 
             <CheckBox
-                android:layout_width="50px"
-                android:layout_height="50px"
-                android:checked="true"
-                android:layout_marginRight="12dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="12dp" />
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/cart_selector"
+                android:button="@null"
+                android:checked="true" />
         </RelativeLayout>
     </LinearLayout>
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center">
+
         <TextView
             android:layout_width="950px"
             android:layout_height="120px"
+            android:background="@drawable/text_view_huang"
+            android:gravity="center"
             android:text="确认充值"
             android:textColor="#333333"
-            android:textSize="50px"
-            android:background="@drawable/text_view_huang"
-            android:gravity="center"/>
+            android:textSize="50px" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,186 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="650px"
-        android:background="@mipmap/wodezhanghu_beijing"
+        android:layout_height="332px"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/my_account_title"
-            layout="@layout/title"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+        <include layout="@layout/action_bar" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/my_account_title"
+            android:layout_height="232px"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/money"
+                android:id="@+id/tv_rental"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center|bottom"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="300.7"
-                android:textColor="#333333"
-                android:textSize="120px" />
+                android:textColor="@color/text_back"
+                android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/tv_account_money"
                 android:layout_width="match_parent"
-                android:layout_height="250px"
-                android:gravity="center|top"
-                android:text="我的余额（元）"
-                android:textColor="#333333"
-                android:textSize="40px" />
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="我的总余额(元)"
+                android:textColor="@color/text_back"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="300.7"
+                    android:textColor="@color/text_back"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/tv_income"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="300.7"
+                    android:textColor="@color/text_back"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
         android:orientation="vertical">
 
-        <LinearLayout
+        <include
+            layout="@layout/common_view"
             android:layout_width="match_parent"
-            android:layout_height="150px"
-            android:orientation="horizontal">
+            android:layout_height="3px" />
+
+        <RelativeLayout
+            android:id="@+id/ll_bill"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true">
 
             <TextView
-                android:id="@+id/coupon"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="40px"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="我的优惠劵"
-                android:textColor="#333333"
-                android:textSize="40px" />
-            <TextView
-                android:id="@+id/coupon_num"
-                android:layout_width="200px"
-                android:layout_height="match_parent"
-                android:text="8"
+                android:layout_alignParentLeft="true"
                 android:gravity="center"
-                android:textSize="50px"
-                android:textColor="#ff6600"/>
-
-            <View
-                android:layout_width="30px"
-                android:layout_height="60px"
-                android:layout_gravity="center"
-                android:layout_marginRight="40px"
-                android:background="@mipmap/more_xiao" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5px"
-            android:background="#f5f5f5" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150px"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/bill"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="40px"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
                 android:text="账单"
-                android:textColor="#333333"
-                android:textSize="40px" />
-
-            <View
-                android:layout_width="30px"
-                android:layout_height="60px"
-                android:layout_gravity="center"
-                android:layout_marginRight="40px"
-                android:background="@mipmap/more_xiao" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5px"
-            android:background="#f5f5f5" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150px"
-            android:orientation="horizontal">
+                android:textColor="@color/text_back"
+                android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/pay_password"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="40px"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="20dp"
+                android:drawableRight="@mipmap/more_xiao"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/price"
+                android:textSize="34px" />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/common_view"
+            android:layout_width="match_parent"
+            android:layout_height="3px" />
+
+        <RelativeLayout
+            android:id="@+id/ll_pay_password"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
                 android:text="支付密码"
-                android:textColor="#333333"
-                android:textSize="40px" />
-
-            <View
-                android:layout_width="30px"
-                android:layout_height="60px"
-                android:layout_gravity="center"
-                android:layout_marginRight="40px"
-                android:background="@mipmap/more_xiao" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5px"
-            android:background="#f5f5f5" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150px"
-            android:orientation="horizontal">
+                android:textColor="@color/text_back"
+                android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/bind_account"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="40px"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="账户绑定"
-                android:textColor="#333333"
-                android:textSize="40px" />
+                android:layout_alignParentRight="true"
+                android:drawablePadding="20dp"
+                android:drawableRight="@mipmap/more_xiao"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/price"
+                android:textSize="34px" />
+        </RelativeLayout>
 
-            <View
-                android:layout_width="30px"
-                android:layout_height="60px"
-                android:layout_gravity="center"
-                android:layout_marginRight="40px"
-                android:background="@mipmap/more_xiao" />
-        </LinearLayout>
+        <include
+            layout="@layout/common_view"
+            android:layout_width="match_parent"
+            android:layout_height="3px" />
+
+        <RelativeLayout
+            android:id="@+id/ll_account_binding"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="账号绑定"
+                android:textColor="@color/text_back"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="20px"
+                android:drawableRight="@mipmap/more_xiao"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/price"
+                android:textSize="34px" />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/common_view"
+            android:layout_width="match_parent"
+            android:layout_height="3px" />
     </LinearLayout>
-    <LinearLayout
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center|bottom">
-        <TextView
-            android:id="@+id/recharge"
-            android:layout_width="950px"
-            android:layout_height="120px"
-            android:background="@drawable/text_view_huang"
-            android:text="充值"
-            android:textSize="50px"
-            android:gravity="center"
-            android:textColor="#333333"
-            android:layout_marginBottom="40px"/>
-
-    </LinearLayout>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:background="@drawable/text_view_huang"
+        android:text="充值"
+        android:textColor="@color/text_back" />
+</RelativeLayout>

@@ -25,7 +25,6 @@ import com.freak.legalaid.imageloader.GlideImageLoader;
 import com.freak.legalaid.library.net.RealmHelper;
 import com.freak.legalaid.library.rxjava.RxBus;
 import com.freak.legalaid.utils.SPUtils;
-import com.freak.legalaid.utils.ShareUtil;
 import com.freak.legalaid.utils.ToastUtil;
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.bean.ImageItem;
@@ -193,6 +192,9 @@ public class InformationFragment extends Fragment implements View.OnClickListene
              * 我的账户
              */
             case R.id.ll_me_account:
+                Intent accountIntent=new Intent();
+                accountIntent.setClass(getActivity(),MyAccountActivity.class);
+                startActivity(accountIntent);
                 break;
             /**
              * 我的相册
@@ -234,11 +236,11 @@ public class InformationFragment extends Fragment implements View.OnClickListene
                 Bitmap bitmap = BitmapFactory.decodeResource(this.getContext().getResources(), R.drawable.do1);
                 Uri uri = Uri.parse(MediaStore.Images.Media.insertImage(getActivity().getContentResolver(),bitmap , null,null));
                 //微信朋友圈分享
-                ShareUtil.shareImageChina(getActivity(),"com.tencent.mm","com.tencent.mm.ui.tools.ShareToTimeLineUI",uri);
-                //所有的第三方软件分享
-//                Intent intent=new Intent();
-//                intent.setClass(getActivity(),ShareActivity.class);
-//                startActivity(intent);
+//                ShareUtil.shareImageChina(getActivity(),"com.tencent.mm","com.tencent.mm.ui.tools.ShareToTimeLineUI",uri);
+//                所有的第三方软件分享
+                Intent intent=new Intent();
+                intent.setClass(getActivity(),ShareActivity.class);
+                startActivity(intent);
                 break;
             /**
              * 使用手册

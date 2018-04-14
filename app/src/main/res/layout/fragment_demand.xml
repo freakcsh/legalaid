@@ -1,24 +1,87 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:freak="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:freak="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context="com.freak.legalaid.model_demand.DemandFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <com.freak.legalaid.custom.CustomImageView
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_margin="10dp"
-        freak:src="@drawable/timg1"
-        freak:type="circle" />
-    <com.freak.legalaid.custom.CustomImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        freak:borderRadius="10dp"
-        freak:src="@drawable/timg"
-        freak:type="round" />
+    <!--<com.freak.legalaid.custom.CustomImageView-->
+    <!--android:layout_width="140dp"-->
+    <!--android:layout_height="140dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--freak:src="@drawable/timg1"-->
+    <!--freak:type="circle" />-->
+    <!--<com.freak.legalaid.custom.CustomImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="10dp"-->
+    <!--freak:borderRadius="10dp"-->
+    <!--freak:src="@drawable/timg"-->
+    <!--freak:type="round" />-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="需求管理"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_send_demand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/add_small"
+                android:gravity="center"
+                android:text="发布需求"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/demand_magic"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/demand_recycle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+    <!--</LinearLayout>-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/demand_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

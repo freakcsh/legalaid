@@ -1,18 +1,14 @@
 package com.freak.legalaid.library.base;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 
 import com.freak.legalaid.app.App;
 
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportActivity;
 
 /**
@@ -23,7 +19,7 @@ import me.yokeyword.fragmentation.SupportActivity;
 public abstract class SimpleActivity extends SupportActivity {
 
     protected Activity mContext;
-    private Unbinder mUnBinder;
+//    private Unbinder mUnBinder;
 
 
     @Override
@@ -34,7 +30,7 @@ public abstract class SimpleActivity extends SupportActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(getLayout());
-        mUnBinder = ButterKnife.bind(this);
+//        mUnBinder = ButterKnife.bind(this);
         mContext = this;
         App.getInstance().addActivity(this);
         initEventAndData();
@@ -44,7 +40,7 @@ public abstract class SimpleActivity extends SupportActivity {
     protected void onDestroy() {
         super.onDestroy();
         App.getInstance().removeActivity(this);
-        mUnBinder.unbind();
+//        mUnBinder.unbind();
     }
 
     @Override
