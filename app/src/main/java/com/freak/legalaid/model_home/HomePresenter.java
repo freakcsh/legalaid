@@ -10,30 +10,6 @@ import com.freak.legalaid.library.rxjava.SubscriberCallBack;
 
 import rx.Observable;
 
-/*
-   private ApiServer apiServer = HttpMethods.getInstance().create(ApiServer.class);
-
-    /**
-     * HomeContract中接口Presenter中的方法，在此方法中进行网络请求
-     * @param type 类型
-     * @param key appId
-     */
-/*
-        Observable observable=apiServer.getNews(type,key).map(new HttpResultFunc<HomeDataBean>());
-        addSubscription(observable,new SubscriberCallBack(new ApiCallback<HomeDataBean>() {
-
-
-            @Override
-            public void onSuccess(HomeDataBean model) {
-
-            }
-
-            @Override
-            public void onFailure(String msg) {
-
-            }
-        }));
- */
 public class HomePresenter extends RxPresenter<HomeContract.View> implements HomeContract.Presenter {
     private ApiServer apiServer = HttpMethods.getInstance().create(ApiServer.class);
 
@@ -41,6 +17,9 @@ public class HomePresenter extends RxPresenter<HomeContract.View> implements Hom
      * HomeContract中接口Presenter中的方法，在此方法中进行网络请求
      * @param type 类型
      * @param key appId
+     *            SubscriberCallBack（）这个方法是订阅，订阅之后会执行里面的方法
+     *            apiServer.getNews(type, key) 得到的是在apiServer里面定义的返回值类型
+     *            map（）利用map操作符把我们得到的返回值类型转化成我需要的那部分数据
      */
     @Override
     public void getNews(String type, String key) {
@@ -50,7 +29,6 @@ public class HomePresenter extends RxPresenter<HomeContract.View> implements Hom
 
             @Override
             public void onSuccess(HomeDataBean model) {
-//                Log.e("freak",model.getResult().getData().toString());
                 mView.getNewsSuccess(model);
             }
 

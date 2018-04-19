@@ -71,7 +71,7 @@ public class DemandFragment extends BaseFragment {
         viewPager = view.findViewById(R.id.demand_viewpager);
         demand_magic = view.findViewById(R.id.demand_magic);
         tv_send_demand = view.findViewById(R.id.tv_send_demand);
-        demandType= (String) SPUtils.get(getActivity(), Constants.TYPE, "");
+        demandType = (String) SPUtils.get(getActivity(), Constants.TYPE, "");
         if ("common".equals(demandType)) {
             tv_send_demand.setVisibility(View.VISIBLE);
             type = getResources().getStringArray(R.array.common_type);
@@ -143,14 +143,14 @@ public class DemandFragment extends BaseFragment {
          */
         ViewPagerHelper.bind(demand_magic, viewPager);
 
-        mRealmHelper=new RealmHelper();
+        mRealmHelper = new RealmHelper();
         tv_send_demand.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String userName = (String) SPUtils.get(getActivity(), Constants.USERNAME, "");
-                if ("common".equals(demandType)){
+                if ("common".equals(demandType)) {
                     LoginCommonUserBean commonUserBean = DataSupport.where("userName = ?", userName).findFirst(LoginCommonUserBean.class);
-                    if (TextUtils.isEmpty(commonUserBean.getRealName())){
+                    if (TextUtils.isEmpty(commonUserBean.getRealName())) {
 //                        ToastUtil.shortShow("发布需求需要实名验证，请先到我的设置页面进行实名验证。");
                         DialogUtil.showCommonDialog(getActivity(), "温馨提示", "发布需求需要实名验证，请先到我的设置页面进行实名验证。", "取消", "确定", new CommonTipsDialogFragment.OnTipsListener() {
                             @Override
@@ -163,9 +163,10 @@ public class DemandFragment extends BaseFragment {
 
                             }
                         });
-                    }else {
-                        Intent intent=new Intent();
-
+                    } else {
+                        Intent intent = new Intent();
+                        intent.setClass(getActivity(),ReleaseDemand.class);
+                        startActivity(intent);
                     }
 
                 }
@@ -192,7 +193,7 @@ public class DemandFragment extends BaseFragment {
 
         @Override
         public Fragment getItem(int position) {
-            return new DemandDetailFragment(type[position]);
+            return new DemandDetailFragment(type[position],position);
         }
 
         @Override

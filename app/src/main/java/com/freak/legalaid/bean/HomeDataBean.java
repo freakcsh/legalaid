@@ -1,171 +1,308 @@
 package com.freak.legalaid.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Administrator on 2018/2/26.
  */
 
-public class HomeDataBean {
+public class HomeDataBean implements Serializable {
 
 
-    private String reason;
-    private ResultBean result;
-    private int error_code;
+//    private String reason;
+//    private ResultBean result;
+//    private int error_code;
+//
+//    public String getReason() {
+//        return reason;
+//    }
+//
+//    public void setReason(String reason) {
+//        this.reason = reason;
+//    }
+//
+//    public ResultBean getResult() {
+//        return result;
+//    }
+//
+//    public void setResult(ResultBean result) {
+//        this.result = result;
+//    }
+//
+//    public int getError_code() {
+//        return error_code;
+//    }
+//
+//    public void setError_code(int error_code) {
+//        this.error_code = error_code;
+//    }
+//
+//    public static class ResultBean {
+//
+//
+//        private String stat;
+//        private List<DataBean> data;
+//
+//        public String getStat() {
+//            return stat;
+//        }
+//
+//        public void setStat(String stat) {
+//            this.stat = stat;
+//        }
+//
+//        public List<DataBean> getData() {
+//            return data;
+//        }
+//
+//        public void setData(List<DataBean> data) {
+//            this.data = data;
+//        }
+//
+//        public static class DataBean {
+//
+//            private String uniquekey;
+//            private String title;
+//            private String date;
+//            private String category;
+//            private String author_name;
+//            private String url;
+//            private String thumbnail_pic_s;
+//            private String thumbnail_pic_s02;
+//            private String thumbnail_pic_s03;
+//
+//            public String getUniquekey() {
+//                return uniquekey;
+//            }
+//
+//            public void setUniquekey(String uniquekey) {
+//                this.uniquekey = uniquekey;
+//            }
+//
+//            public String getTitle() {
+//                return title;
+//            }
+//
+//            public void setTitle(String title) {
+//                this.title = title;
+//            }
+//
+//            public String getDate() {
+//                return date;
+//            }
+//
+//            public void setDate(String date) {
+//                this.date = date;
+//            }
+//
+//            public String getCategory() {
+//                return category;
+//            }
+//
+//            public void setCategory(String category) {
+//                this.category = category;
+//            }
+//
+//            public String getAuthor_name() {
+//                return author_name;
+//            }
+//
+//            public void setAuthor_name(String author_name) {
+//                this.author_name = author_name;
+//            }
+//
+//            public String getUrl() {
+//                return url;
+//            }
+//
+//            public void setUrl(String url) {
+//                this.url = url;
+//            }
+//
+//            public String getThumbnail_pic_s() {
+//                return thumbnail_pic_s;
+//            }
+//
+//            public void setThumbnail_pic_s(String thumbnail_pic_s) {
+//                this.thumbnail_pic_s = thumbnail_pic_s;
+//            }
+//
+//            public String getThumbnail_pic_s02() {
+//                return thumbnail_pic_s02;
+//            }
+//
+//            public void setThumbnail_pic_s02(String thumbnail_pic_s02) {
+//                this.thumbnail_pic_s02 = thumbnail_pic_s02;
+//            }
+//
+//            public String getThumbnail_pic_s03() {
+//                return thumbnail_pic_s03;
+//            }
+//
+//            public void setThumbnail_pic_s03(String thumbnail_pic_s03) {
+//                this.thumbnail_pic_s03 = thumbnail_pic_s03;
+//            }
+//
+//            @Override
+//            public String toString() {
+//                return "DataBean{" +
+//                        "uniquekey='" + uniquekey + '\'' +
+//                        ", title='" + title + '\'' +
+//                        ", date='" + date + '\'' +
+//                        ", category='" + category + '\'' +
+//                        ", author_name='" + author_name + '\'' +
+//                        ", url='" + url + '\'' +
+//                        ", thumbnail_pic_s='" + thumbnail_pic_s + '\'' +
+//                        ", thumbnail_pic_s02='" + thumbnail_pic_s02 + '\'' +
+//                        ", thumbnail_pic_s03='" + thumbnail_pic_s03 + '\'' +
+//                        '}';
+//            }
+//        }
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "HomeDataBean{" +
+//                "reason='" + reason + '\'' +
+//                ", result=" + result +
+//                ", error_code=" + error_code +
+//                '}';
+//    }
 
-    public String getReason() {
-        return reason;
+
+    private String stat;
+
+    private List<Data> data;
+
+    public void setStat(String stat) {
+        this.stat = stat;
     }
 
-    public void setReason(String reason) {
-        this.reason = reason;
+    public String getStat() {
+        return this.stat;
     }
 
-    public ResultBean getResult() {
-        return result;
+    public void setData(List<Data> data) {
+        this.data = data;
     }
 
-    public void setResult(ResultBean result) {
-        this.result = result;
+    public List<Data> getData() {
+        return this.data;
     }
 
-    public int getError_code() {
-        return error_code;
-    }
+    public class Data {
+        private String uniquekey;
 
-    public void setError_code(int error_code) {
-        this.error_code = error_code;
-    }
+        private String title;
 
-    public static class ResultBean {
+        private String date;
 
+        private String category;
 
-        private String stat;
-        private List<DataBean> data;
+        private String author_name;
 
-        public String getStat() {
-            return stat;
+        private String url;
+
+        private String thumbnail_pic_s;
+
+        private String thumbnail_pic_s02;
+
+        private String thumbnail_pic_s03;
+
+        public void setUniquekey(String uniquekey) {
+            this.uniquekey = uniquekey;
         }
 
-        public void setStat(String stat) {
-            this.stat = stat;
+        public String getUniquekey() {
+            return this.uniquekey;
         }
 
-        public List<DataBean> getData() {
-            return data;
+        public void setTitle(String title) {
+            this.title = title;
         }
 
-        public void setData(List<DataBean> data) {
-            this.data = data;
+        public String getTitle() {
+            return this.title;
         }
 
-        public static class DataBean {
+        public void setDate(String date) {
+            this.date = date;
+        }
 
-            private String uniquekey;
-            private String title;
-            private String date;
-            private String category;
-            private String author_name;
-            private String url;
-            private String thumbnail_pic_s;
-            private String thumbnail_pic_s02;
-            private String thumbnail_pic_s03;
+        public String getDate() {
+            return this.date;
+        }
 
-            public String getUniquekey() {
-                return uniquekey;
-            }
+        public void setCategory(String category) {
+            this.category = category;
+        }
 
-            public void setUniquekey(String uniquekey) {
-                this.uniquekey = uniquekey;
-            }
+        public String getCategory() {
+            return this.category;
+        }
 
-            public String getTitle() {
-                return title;
-            }
+        public void setAuthor_name(String author_name) {
+            this.author_name = author_name;
+        }
 
-            public void setTitle(String title) {
-                this.title = title;
-            }
+        public String getAuthor_name() {
+            return this.author_name;
+        }
 
-            public String getDate() {
-                return date;
-            }
+        public void setUrl(String url) {
+            this.url = url;
+        }
 
-            public void setDate(String date) {
-                this.date = date;
-            }
+        public String getUrl() {
+            return this.url;
+        }
 
-            public String getCategory() {
-                return category;
-            }
+        public void setThumbnail_pic_s(String thumbnail_pic_s) {
+            this.thumbnail_pic_s = thumbnail_pic_s;
+        }
 
-            public void setCategory(String category) {
-                this.category = category;
-            }
+        public String getThumbnail_pic_s() {
+            return this.thumbnail_pic_s;
+        }
 
-            public String getAuthor_name() {
-                return author_name;
-            }
+        public void setThumbnail_pic_s02(String thumbnail_pic_s02) {
+            this.thumbnail_pic_s02 = thumbnail_pic_s02;
+        }
 
-            public void setAuthor_name(String author_name) {
-                this.author_name = author_name;
-            }
+        public String getThumbnail_pic_s02() {
+            return this.thumbnail_pic_s02;
+        }
 
-            public String getUrl() {
-                return url;
-            }
+        public void setThumbnail_pic_s03(String thumbnail_pic_s03) {
+            this.thumbnail_pic_s03 = thumbnail_pic_s03;
+        }
 
-            public void setUrl(String url) {
-                this.url = url;
-            }
+        public String getThumbnail_pic_s03() {
+            return this.thumbnail_pic_s03;
+        }
 
-            public String getThumbnail_pic_s() {
-                return thumbnail_pic_s;
-            }
-
-            public void setThumbnail_pic_s(String thumbnail_pic_s) {
-                this.thumbnail_pic_s = thumbnail_pic_s;
-            }
-
-            public String getThumbnail_pic_s02() {
-                return thumbnail_pic_s02;
-            }
-
-            public void setThumbnail_pic_s02(String thumbnail_pic_s02) {
-                this.thumbnail_pic_s02 = thumbnail_pic_s02;
-            }
-
-            public String getThumbnail_pic_s03() {
-                return thumbnail_pic_s03;
-            }
-
-            public void setThumbnail_pic_s03(String thumbnail_pic_s03) {
-                this.thumbnail_pic_s03 = thumbnail_pic_s03;
-            }
-
-            @Override
-            public String toString() {
-                return "DataBean{" +
-                        "uniquekey='" + uniquekey + '\'' +
-                        ", title='" + title + '\'' +
-                        ", date='" + date + '\'' +
-                        ", category='" + category + '\'' +
-                        ", author_name='" + author_name + '\'' +
-                        ", url='" + url + '\'' +
-                        ", thumbnail_pic_s='" + thumbnail_pic_s + '\'' +
-                        ", thumbnail_pic_s02='" + thumbnail_pic_s02 + '\'' +
-                        ", thumbnail_pic_s03='" + thumbnail_pic_s03 + '\'' +
-                        '}';
-            }
+        @Override
+        public String toString() {
+            return "Data{" +
+                    "uniquekey='" + uniquekey + '\'' +
+                    ", title='" + title + '\'' +
+                    ", date='" + date + '\'' +
+                    ", category='" + category + '\'' +
+                    ", author_name='" + author_name + '\'' +
+                    ", url='" + url + '\'' +
+                    ", thumbnail_pic_s='" + thumbnail_pic_s + '\'' +
+                    ", thumbnail_pic_s02='" + thumbnail_pic_s02 + '\'' +
+                    ", thumbnail_pic_s03='" + thumbnail_pic_s03 + '\'' +
+                    '}';
         }
     }
 
     @Override
     public String toString() {
         return "HomeDataBean{" +
-                "reason='" + reason + '\'' +
-                ", result=" + result +
-                ", error_code=" + error_code +
+                "stat='" + stat + '\'' +
+                ", data=" + data +
                 '}';
     }
 }

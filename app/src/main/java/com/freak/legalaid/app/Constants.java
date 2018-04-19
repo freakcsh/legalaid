@@ -19,8 +19,19 @@ public class Constants {
     /**
      * 服务器地址
      */
-//    public static final String BASE_URL = "http://v.juhe.cn/";
-    public static final String BASE_URL = "http://120.79.82.252";//远程
+    public static final String BASE_URL = "http://v.juhe.cn/";
+
+
+
+
+
+
+
+
+
+
+
+//    public static final String BASE_URL = "http://120.79.82.252";//远程
     //公用对话框的提示
     public static final String TIPS_TITLE = "tipsTitle";
     public static final String TIPS_TEXT = "tipsText";

@@ -12,13 +12,13 @@ import com.freak.legalaid.bean.HomeDataBean;
  * Created by Administrator on 2018/2/25.
  */
 
-public class HomeDataAdapter extends BaseQuickAdapter<HomeDataBean.ResultBean.DataBean,BaseViewHolder>{
+public class HomeDataAdapter extends BaseQuickAdapter<HomeDataBean.Data,BaseViewHolder>{
     public HomeDataAdapter() {
         super(R.layout.home_item_data);
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, HomeDataBean.ResultBean.DataBean item) {
+    protected void convert(BaseViewHolder helper, HomeDataBean.Data item) {
         helper.setText(R.id.tv_news_detail_title,item.getTitle());
         helper.setText(R.id.tv_news_detail_author_name,item.getAuthor_name());
         helper.setText(R.id.tv_news_detail_date,item.getDate());

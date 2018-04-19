@@ -39,7 +39,7 @@
     <string-array name="lawyer_type">
         <item>待接单</item>
         <item>已接单</item>
-        <item>已完成</item>
+        <item>订单完成</item>
     </string-array>
 
     <string name="mine_account">我的账户</string>

@@ -17,6 +17,7 @@ import rx.Observable;
 
 public interface ApiServer {
 
+//    @GET("toutiao/index?")
     @GET("toutiao/index")
     Observable<HttpResult<HomeDataBean>> getNews(@Query("type") String type,
                                                  @Query("key") String key);

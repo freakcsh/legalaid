@@ -2,10 +2,12 @@ package com.freak.legalaid.library.net;
 
 import android.util.Log;
 
+import com.freak.legalaid.bean.DemandBean;
 import com.freak.legalaid.bean.ImageBean;
 import com.freak.legalaid.bean.LegalAidBean;
 import com.freak.legalaid.bean.LoginCommonUserBean;
 import com.freak.legalaid.bean.LoginLawyerUserBean;
+import com.freak.legalaid.bean.OrderBean;
 import com.lzy.imagepicker.bean.ImageItem;
 
 import org.litepal.crud.DataSupport;
@@ -89,11 +91,11 @@ public class RealmHelper {
      * @param userName 用户名
      * @param password 用户密码
      */
-    public void addUserLogin(String type, String userName,String realName, String password,String sex,String age,String phone,String address) {
+    public void addUserLogin(String type, String userName, String realName, String password, String sex, String age, String phone, String address) {
         if ("common".equals(type)) {
             LoginCommonUserBean commonUserBean = null;
             List<LoginCommonUserBean> userBeanList = new ArrayList<>();
-            if (selectCommonUser(userName)){
+            if (selectCommonUser(userName)) {
                 userBeanList.clear();
                 LoginCommonUserBean loginCommonUserBean = DataSupport.where("userName = ?", userName).findFirst(LoginCommonUserBean.class);
                 loginCommonUserBean.setType(type);
@@ -107,7 +109,7 @@ public class RealmHelper {
                 userBeanList.add(loginCommonUserBean);
                 DataSupport.saveAll(userBeanList);
                 Log.e("freak", "更改普通用户表之后查询数据：" + DataSupport.findAll(LoginCommonUserBean.class).toString());
-            }else {
+            } else {
                 commonUserBean = new LoginCommonUserBean();
                 commonUserBean.setType(type);
                 commonUserBean.setUserName(userName);
@@ -125,7 +127,7 @@ public class RealmHelper {
         } else if ("lawyer".equals(type)) {
             LoginLawyerUserBean lawyerUserBean = null;
             List<LoginLawyerUserBean> loginLawyerUserBeanList = new ArrayList<>();
-            if (selectLawyerUser(userName)){
+            if (selectLawyerUser(userName)) {
                 loginLawyerUserBeanList.clear();
                 LoginLawyerUserBean loginLawyerUserBean = DataSupport.where("userName = ?", userName).findFirst(LoginLawyerUserBean.class);
                 loginLawyerUserBean.setType(type);
@@ -139,7 +141,7 @@ public class RealmHelper {
                 loginLawyerUserBeanList.add(loginLawyerUserBean);
                 DataSupport.saveAll(loginLawyerUserBeanList);
                 Log.e("freak", "更改律师用户表之后查询数据：" + DataSupport.findAll(LoginLawyerUserBean.class).toString());
-            }else {
+            } else {
                 lawyerUserBean = new LoginLawyerUserBean();
                 lawyerUserBean.setType(type);
                 lawyerUserBean.setUserName(userName);
@@ -161,7 +163,7 @@ public class RealmHelper {
     /***
      * 保存图片
      */
-    public void addImage(ArrayList<ImageItem> images,String path) {
+    public void addImage(ArrayList<ImageItem> images, String path) {
         ImageBean imageBean = null;
         List<ImageBean> list = new ArrayList<>();
         list.clear();
@@ -183,6 +185,191 @@ public class RealmHelper {
             return false;
         }
 
+    }
+
+    /**
+     * 查询所有的需求
+     *
+     * @return
+     */
+    public List<DemandBean> selectDemand(String type) {
+        List<DemandBean> demandBeans = DataSupport.where("type = ?", type).find(DemandBean.class);
+        return demandBeans;
+    }
+
+    /**
+     * 保存发布需求
+     *
+     * @param userName
+     * @param title
+     * @param context
+     * @param reward
+     * @param address
+     * @param demandState
+     * @param userImagePah
+     * @param startTime
+     * @param endTime
+     * @param orderUserName
+     * @param sn
+     * @param orderTime
+     */
+    public void saveDemand(String type, String userName, String title, String context, String reward, String address, String demandState,
+                           String userImagePah, String startTime, String endTime, String orderUserName, String sn, String orderTime) {
+        DemandBean demandBean = null;
+        List<DemandBean> demandBeanList = new ArrayList<>();
+        demandBeanList.clear();
+        demandBean = new DemandBean();
+        demandBean.setType(type);
+        demandBean.setUserName(userName);
+        demandBean.setTitle(title);
+        demandBean.setContext(context);
+        demandBean.setReward(reward);
+        demandBean.setAddress(address);
+        demandBean.setDemandState(demandState);
+        demandBean.setUserImagePah(userImagePah);
+        demandBean.setStartTime(startTime);
+        demandBean.setEndTime(endTime);
+        demandBean.setOrderUserName(orderUserName);
+        demandBean.setOrderTime(orderTime);
+        demandBean.setSn(sn);
+        demandBeanList.add(demandBean);
+        DataSupport.saveAll(demandBeanList);
+    }
+
+    public void updateDemand(long id, String type, String userName, String title, String context, String reward, String address, String demandState,
+                             String userImagePah, String startTime, String endTime, String orderUserName, String sn, String orderTime){
+        List<DemandBean> demandBeanList = new ArrayList<>();
+        demandBeanList.clear();
+        demandBeanList = DataSupport.findAll(DemandBean.class, id);
+        Log.e("freak","查询的数据"+demandBeanList.toString());
+        if (demandBeanList.size() != 0) {
+            for (int i = 0; i < demandBeanList.size(); i++) {
+                demandBeanList.get(i).setType(type);
+                demandBeanList.get(i).setUserName(userName);
+                demandBeanList.get(i).setTitle(title);
+                demandBeanList.get(i).setContext(context);
+                demandBeanList.get(i).setReward(reward);
+                demandBeanList.get(i).setAddress(address);
+                demandBeanList.get(i).setDemandState(demandState);
+                demandBeanList.get(i).setUserImagePah(userImagePah);
+                demandBeanList.get(i).setStartTime(startTime);
+                demandBeanList.get(i).setEndTime(endTime);
+                demandBeanList.get(i).setOrderUserName(orderUserName);
+                demandBeanList.get(i).setSn(sn);
+                demandBeanList.get(i).setOrderTime(orderTime);
+            }
+
+            DataSupport.saveAll(demandBeanList);
+            Log.e("freak", DataSupport.findAll(OrderBean.class).toString());
+
+        }
+    }
+    /**
+     * 查询发布需求的状态，是否发布成功
+     *
+     * @param title
+     * @return
+     */
+    public boolean selectDemandState(String title) {
+        DemandBean first = DataSupport.where("title = ?", title).findFirst(DemandBean.class);
+        if (first != null) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    /**
+     * 保存订单
+     *
+     * @param type
+     * @param userName
+     * @param title
+     * @param context
+     * @param reward
+     * @param address
+     * @param orderState
+     * @param userImagePah
+     * @param startTime
+     * @param endTime
+     * @param orderUserName
+     * @param sn
+     * @param orderTime
+     */
+    public void saveOrder(String type, String userName, String title, String context, String reward, String address, String orderState,
+                          String userImagePah, String startTime, String endTime, String orderUserName, String sn, String orderTime) {
+        OrderBean orderBean = null;
+        List<OrderBean> orderBeanList = new ArrayList<>();
+        orderBean = new OrderBean();
+        orderBeanList.clear();
+        orderBean.setType(type);
+        orderBean.setUserName(userName);
+        orderBean.setTitle(title);
+        orderBean.setContext(context);
+        orderBean.setReward(reward);
+        orderBean.setAddress(address);
+        orderBean.setOrderState(orderState);
+        orderBean.setUserImagePah(userImagePah);
+        orderBean.setStartTime(startTime);
+        orderBean.setEndTime(endTime);
+        orderBean.setOrderUserName(orderUserName);
+        orderBean.setSn(sn);
+        orderBean.setOrderTime(orderTime);
+        orderBeanList.add(orderBean);
+        DataSupport.saveAll(orderBeanList);
+    }
+
+    /**
+     * 更新订单
+     *
+     * @param type
+     * @param userName
+     * @param title
+     * @param context
+     * @param reward
+     * @param address
+     * @param orderState
+     * @param userImagePah
+     * @param startTime
+     * @param endTime
+     * @param orderUserName
+     * @param sn
+     * @param orderTime
+     */
+    public void updateOrder(long id, String type, String userName, String title, String context, String reward, String address, String orderState,
+                            String userImagePah, String startTime, String endTime, String orderUserName, String sn, String orderTime) {
+        List<OrderBean> orderBeanList = new ArrayList<>();
+        orderBeanList.clear();
+        orderBeanList = DataSupport.findAll(OrderBean.class, id);
+        Log.e("freak","查询的数据"+orderBeanList.toString());
+        if (orderBeanList.size() != 0) {
+            for (int i = 0; i < orderBeanList.size(); i++) {
+                orderBeanList.get(i).setType(type);
+                orderBeanList.get(i).setUserName(userName);
+                orderBeanList.get(i).setTitle(title);
+                orderBeanList.get(i).setContext(context);
+                orderBeanList.get(i).setReward(reward);
+                orderBeanList.get(i).setAddress(address);
+                orderBeanList.get(i).setOrderState(orderState);
+                orderBeanList.get(i).setUserImagePah(userImagePah);
+                orderBeanList.get(i).setStartTime(startTime);
+                orderBeanList.get(i).setEndTime(endTime);
+                orderBeanList.get(i).setOrderUserName(orderUserName);
+                orderBeanList.get(i).setSn(sn);
+                orderBeanList.get(i).setOrderTime(orderTime);
+            }
+
+            DataSupport.saveAll(orderBeanList);
+            Log.e("freak", DataSupport.findAll(OrderBean.class).toString());
+
+        }
+
+    }
+
+    public List<OrderBean> selectOrder(String type) {
+        List<OrderBean> orderBeanList = DataSupport.where("type = ?", type).find(OrderBean.class);
+        return orderBeanList;
     }
 
 //    /**

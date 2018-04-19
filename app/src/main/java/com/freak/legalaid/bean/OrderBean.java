@@ -5,8 +5,11 @@ import android.os.Parcelable;
 
 import org.litepal.crud.DataSupport;
 
-public class DemandBean extends DataSupport implements Parcelable {
+public class OrderBean extends DataSupport implements Parcelable {
     private long id;
+    /**
+     * 类型
+     */
     private String type;
     /**
      * 用户名
@@ -33,9 +36,9 @@ public class DemandBean extends DataSupport implements Parcelable {
      */
     private String address;
     /**
-     * 发布状态  ： 发布 、待完成、接单人发起请求确认完成，用户确认完成、已完成
+     * 订单状态
      */
-    private String demandState;
+    private String orderState;
     /**
      * 发布用户头像地址
      */
@@ -61,12 +64,11 @@ public class DemandBean extends DataSupport implements Parcelable {
      */
     private String orderTime;
 
-
-    public DemandBean() {
+    public OrderBean() {
     }
 
 
-    protected DemandBean(Parcel in) {
+    protected OrderBean(Parcel in) {
         id = in.readLong();
         type = in.readString();
         userName = in.readString();
@@ -75,7 +77,7 @@ public class DemandBean extends DataSupport implements Parcelable {
         releaseTime = in.readString();
         reward = in.readString();
         address = in.readString();
-        demandState = in.readString();
+        orderState = in.readString();
         userImagePah = in.readString();
         startTime = in.readString();
         endTime = in.readString();
@@ -84,15 +86,15 @@ public class DemandBean extends DataSupport implements Parcelable {
         orderTime = in.readString();
     }
 
-    public static final Creator<DemandBean> CREATOR = new Creator<DemandBean>() {
+    public static final Creator<OrderBean> CREATOR = new Creator<OrderBean>() {
         @Override
-        public DemandBean createFromParcel(Parcel in) {
-            return new DemandBean(in);
+        public OrderBean createFromParcel(Parcel in) {
+            return new OrderBean(in);
         }
 
         @Override
-        public DemandBean[] newArray(int size) {
-            return new DemandBean[size];
+        public OrderBean[] newArray(int size) {
+            return new OrderBean[size];
         }
     };
 
@@ -102,14 +104,6 @@ public class DemandBean extends DataSupport implements Parcelable {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getUserName() {
@@ -160,12 +154,12 @@ public class DemandBean extends DataSupport implements Parcelable {
         this.address = address;
     }
 
-    public String getDemandState() {
-        return demandState;
+    public String getOrderState() {
+        return orderState;
     }
 
-    public void setDemandState(String demandState) {
-        this.demandState = demandState;
+    public void setOrderState(String orderState) {
+        this.orderState = orderState;
     }
 
     public String getUserImagePah() {
@@ -216,6 +210,14 @@ public class DemandBean extends DataSupport implements Parcelable {
         this.orderTime = orderTime;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -223,6 +225,7 @@ public class DemandBean extends DataSupport implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+
         dest.writeLong(id);
         dest.writeString(type);
         dest.writeString(userName);
@@ -231,7 +234,7 @@ public class DemandBean extends DataSupport implements Parcelable {
         dest.writeString(releaseTime);
         dest.writeString(reward);
         dest.writeString(address);
-        dest.writeString(demandState);
+        dest.writeString(orderState);
         dest.writeString(userImagePah);
         dest.writeString(startTime);
         dest.writeString(endTime);
@@ -242,7 +245,7 @@ public class DemandBean extends DataSupport implements Parcelable {
 
     @Override
     public String toString() {
-        return "DemandBean{" +
+        return "OrderBean{" +
                 "id=" + id +
                 ", type='" + type + '\'' +
                 ", userName='" + userName + '\'' +
@@ -251,7 +254,7 @@ public class DemandBean extends DataSupport implements Parcelable {
                 ", releaseTime='" + releaseTime + '\'' +
                 ", reward='" + reward + '\'' +
                 ", address='" + address + '\'' +
-                ", demandState='" + demandState + '\'' +
+                ", orderState='" + orderState + '\'' +
                 ", userImagePah='" + userImagePah + '\'' +
                 ", startTime='" + startTime + '\'' +
                 ", endTime='" + endTime + '\'' +
