@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.freak.legalaid.R;
 import com.freak.legalaid.library.rxjava.BasePresenter;
 import com.freak.legalaid.library.rxjava.BaseView;
 
@@ -20,12 +21,13 @@ import me.yokeyword.fragmentation.SupportFragment;
  * MVP Fragment基类
  */
 
-public abstract class BaseFragment<T extends BasePresenter>  extends SupportFragment implements BaseView {
+public abstract class BaseFragment<T extends BasePresenter> extends SupportFragment implements BaseView {
     protected T mPresenter;
     protected View mView;
     protected Activity mActivity;
     protected Context mContext;
     private Unbinder mUnBinder;
+    protected View loadingView;
 
     protected abstract T createPresenter();
 
@@ -34,6 +36,11 @@ public abstract class BaseFragment<T extends BasePresenter>  extends SupportFrag
     protected abstract void initEventAndData(View view);
 
     protected abstract void initLazyData();
+
+    /**
+     * 显示加载中view，由子类实现
+     */
+    protected abstract void showLoading();
 
     @Override
     public void onAttach(Context context) {
@@ -46,8 +53,10 @@ public abstract class BaseFragment<T extends BasePresenter>  extends SupportFrag
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(getLayoutId(), null);
+        loadingView = inflater.inflate(R.layout.loading_view, container, false);
         return mView;
     }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +68,7 @@ public abstract class BaseFragment<T extends BasePresenter>  extends SupportFrag
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mUnBinder = ButterKnife.bind(this, view);
-        if (mPresenter != null){
+        if (mPresenter != null) {
             mPresenter.attachView(this);
         }
         initEventAndData(view);
@@ -69,13 +78,14 @@ public abstract class BaseFragment<T extends BasePresenter>  extends SupportFrag
     public void onLazyInitView(@Nullable Bundle savedInstanceState) {
         super.onLazyInitView(savedInstanceState);
         initLazyData();
+        showLoading();
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         mUnBinder.unbind();
-        if (mPresenter != null){
+        if (mPresenter != null) {
             mPresenter.detachView();
         }
     }
@@ -83,8 +93,10 @@ public abstract class BaseFragment<T extends BasePresenter>  extends SupportFrag
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mPresenter != null){
+        if (mPresenter != null) {
             mPresenter.detachView();
         }
     }
+
+
 }

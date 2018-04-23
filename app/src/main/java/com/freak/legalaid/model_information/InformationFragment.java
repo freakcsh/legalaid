@@ -54,6 +54,7 @@ public class InformationFragment extends Fragment implements View.OnClickListene
     private String userName;
     private Subscription subscription;
     private String path;
+    private View v_ll_order;
 
     @Nullable
     @Override
@@ -72,6 +73,7 @@ public class InformationFragment extends Fragment implements View.OnClickListene
         ll_me_homepage = view.findViewById(R.id.ll_me_homepage);
         ll_my_cqc = view.findViewById(R.id.ll_my_cqc);
         ll_my_order = view.findViewById(R.id.ll_my_order);
+        v_ll_order = view.findViewById(R.id.v_ll_order);
         ll_my_alter_information = view.findViewById(R.id.ll_my_alter_information);
         ll_my_share = view.findViewById(R.id.ll_my_share);
         ll_my_notebook = view.findViewById(R.id.ll_my_notebook);
@@ -89,6 +91,15 @@ public class InformationFragment extends Fragment implements View.OnClickListene
         ll_my_notebook.setOnClickListener(this);
         ll_my_setting.setOnClickListener(this);
         mRealmHelper = new RealmHelper();
+        String type = (String) SPUtils.get(getActivity(), Constants.TYPE, "");
+        if ("lawyer".equals(type)) {
+            v_ll_order.setVisibility(View.VISIBLE);
+            ll_my_order.setVisibility(View.VISIBLE);
+        } else {
+            ll_my_order.setVisibility(View.GONE);
+            v_ll_order.setVisibility(View.GONE);
+        }
+
         userName = (String) SPUtils.get(getActivity(), Constants.USERNAME, "");
         if (!TextUtils.isEmpty(userName)) {
             me_name.setText(userName);
@@ -192,8 +203,8 @@ public class InformationFragment extends Fragment implements View.OnClickListene
              * 我的账户
              */
             case R.id.ll_me_account:
-                Intent accountIntent=new Intent();
-                accountIntent.setClass(getActivity(),MyAccountActivity.class);
+                Intent accountIntent = new Intent();
+                accountIntent.setClass(getActivity(), MyAccountActivity.class);
                 startActivity(accountIntent);
                 break;
             /**
@@ -220,13 +231,16 @@ public class InformationFragment extends Fragment implements View.OnClickListene
              * 我的订单
              */
             case R.id.ll_my_order:
+                Intent orderIntent = new Intent();
+                orderIntent.setClass(getActivity(), OrderActivity.class);
+                startActivity(orderIntent);
                 break;
             /**
              * 修改个人资料
              */
             case R.id.ll_my_alter_information:
-                Intent informationIntent=new Intent();
-                informationIntent.setClass(getActivity(),AlterInformationActivity.class);
+                Intent informationIntent = new Intent();
+                informationIntent.setClass(getActivity(), AlterInformationActivity.class);
                 startActivity(informationIntent);
                 break;
             /**
@@ -234,12 +248,12 @@ public class InformationFragment extends Fragment implements View.OnClickListene
              */
             case R.id.ll_my_share:
                 Bitmap bitmap = BitmapFactory.decodeResource(this.getContext().getResources(), R.drawable.do1);
-                Uri uri = Uri.parse(MediaStore.Images.Media.insertImage(getActivity().getContentResolver(),bitmap , null,null));
+                Uri uri = Uri.parse(MediaStore.Images.Media.insertImage(getActivity().getContentResolver(), bitmap, null, null));
                 //微信朋友圈分享
 //                ShareUtil.shareImageChina(getActivity(),"com.tencent.mm","com.tencent.mm.ui.tools.ShareToTimeLineUI",uri);
 //                所有的第三方软件分享
-                Intent intent=new Intent();
-                intent.setClass(getActivity(),ShareActivity.class);
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), ShareActivity.class);
                 startActivity(intent);
                 break;
             /**
@@ -251,6 +265,9 @@ public class InformationFragment extends Fragment implements View.OnClickListene
              * 设置
              */
             case R.id.ll_my_setting:
+                Intent settingIntent = new Intent();
+                settingIntent.setClass(getActivity(), SettingActivity.class);
+                startActivity(settingIntent);
                 break;
             default:
                 break;

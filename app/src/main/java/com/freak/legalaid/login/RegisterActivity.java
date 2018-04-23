@@ -123,7 +123,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                         if (selectCommonUser) {
                             ToastUtil.shortShow("用户已经注册过，请直接进行登录。");
                         } else {
-                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), null, registerPassword.getText().toString().trim(), null, null, null, null);
+                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), "", registerPassword.getText().toString().trim(), "", "", "", "");
                             ToastUtil.shortShow("注册成功");
                             finish();
                         }
@@ -132,12 +132,11 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                         if (selectLawyerUser) {
                             ToastUtil.shortShow("用户已经注册过，请直接进行登录。");
                         } else {
-                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), null, registerPassword.getText().toString().trim(), null, null, null, null);
+                            mRealmHelper.addUserLogin(type, registerPhone.getText().toString().trim(), "", registerPassword.getText().toString().trim(), "", "", "", "");
                             ToastUtil.shortShow("注册成功");
                             finish();
                         }
                     }
-
 
                 } else {
                     ToastUtil.shortShow("两次密码不一致。");

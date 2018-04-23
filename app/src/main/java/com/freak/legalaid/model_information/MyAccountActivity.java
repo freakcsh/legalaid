@@ -41,20 +41,20 @@ public class MyAccountActivity extends SimpleActivity implements View.OnClickLis
     }
 
     private void initView() {
-        mBack = findViewById(R.id.back);
-        mTitletext = findViewById(R.id.titletext);
-        mRightBtn = findViewById(R.id.right_btn);
-        mRightText = findViewById(R.id.right_text);
-        mRlTitlebar = findViewById(R.id.rl_titlebar);
-        mTvRental = findViewById(R.id.tv_rental);
-        mTvAccountMoney = findViewById(R.id.tv_account_money);
-        mTvBalance = findViewById(R.id.tv_balance);
-        mTvIncome = findViewById(R.id.tv_income);
-        mTopbar = findViewById(R.id.topbar);
-        mLlBill = findViewById(R.id.ll_bill);
-        mLlPayPassword = findViewById(R.id.ll_pay_password);
-        mLlAccountBinding = findViewById(R.id.ll_account_binding);
-        mButton = findViewById(R.id.button);
+        mBack = (ImageView) findViewById(R.id.back);
+        mTitletext = (TextView) findViewById(R.id.titletext);
+        mRightBtn = (ImageView) findViewById(R.id.right_btn);
+        mRightText = (TextView) findViewById(R.id.right_text);
+        mRlTitlebar = (RelativeLayout) findViewById(R.id.rl_titlebar);
+        mTvRental = (TextView) findViewById(R.id.tv_rental);
+        mTvAccountMoney = (TextView) findViewById(R.id.tv_account_money);
+        mTvBalance = (TextView) findViewById(R.id.tv_balance);
+        mTvIncome = (TextView) findViewById(R.id.tv_income);
+        mTopbar = (LinearLayout) findViewById(R.id.topbar);
+        mLlBill = (RelativeLayout) findViewById(R.id.ll_bill);
+        mLlPayPassword = (RelativeLayout) findViewById(R.id.ll_pay_password);
+        mLlAccountBinding = (RelativeLayout) findViewById(R.id.ll_account_binding);
+        mButton = (Button) findViewById(R.id.button);
 
         mBack.setOnClickListener(this);
         mLlBill.setOnClickListener(this);
@@ -73,10 +73,7 @@ public class MyAccountActivity extends SimpleActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back:
-//                intent=new Intent(getApplicationContext(),MainActivity.class);//若需跳转到Minefragment可传递值让mainActivity启动
-//                intent.putExtra("grxx",4);
                 finish();
-//                startActivity(intent);
                 break;
             case R.id.ll_bill:
                 intent = new Intent();
@@ -88,13 +85,10 @@ public class MyAccountActivity extends SimpleActivity implements View.OnClickLis
                 startActivity(intent);
                 break;
             case R.id.ll_account_binding:
-//                intent = new Intent(getApplicationContext(), AccountBindingActivity.class);
-//                startActivity(intent);
+                intent = new Intent(getApplicationContext(), AccountBindingActivity.class);
+                startActivity(intent);
                 break;
             case R.id.button:
-//                intent = new Intent(this, MyAccountRechargeActivity.class);
-//                startActivity(intent);
-                //  Toast.makeText(this, " 充值被点击了", Toast.LENGTH_LONG).show();
                 Intent intent=new Intent();
                 intent.setClass(this,MyAccountRechargeActivity.class);
                 startActivity(intent);

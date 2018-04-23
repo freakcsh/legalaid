@@ -1,17 +1,12 @@
 package com.freak.legalaid.model_home;
 
-import android.app.ActionBar;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.Window;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.freak.legalaid.R;
-
-
 import com.freak.legalaid.library.base.SimpleActivity;
 import com.freak.legalaid.model_demand.DemandFragment;
 import com.freak.legalaid.model_information.InformationFragment;
@@ -38,7 +33,7 @@ public class MainActivity extends SimpleActivity implements BottomNavigationBar.
     }
 
     private void initView() {
-        mBottomNavigationBar = findViewById(R.id.bnb);
+        mBottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bnb);
         fm = MainActivity.this.getSupportFragmentManager();
         transaction = fm.beginTransaction();
         mHomeFragment = new HomeFragment();

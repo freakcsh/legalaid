@@ -17,6 +17,7 @@
             android:layout_height="40dp">
 
             <TextView
+                android:id="@+id/tv_back"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:drawableLeft="@mipmap/return_img"
@@ -125,18 +126,25 @@
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
-                <EditText
-                    android:id="@+id/edt_release_context"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@null"
-                    android:gravity="center|right"
-                    android:hint="请输入需求的正文，最大字数不能超过200字。"
-                    android:maxLength="200"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/key_gray"
-                    android:textSize="14sp" />
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/TextAppearance.Design.Error">
+
+                    <EditText
+                        android:id="@+id/edt_release_context"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center|right"
+                        android:hint="请输入需求的正文，最大字数不能超过200字。"
+                        android:maxLength="200"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/key_gray"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
             <View
@@ -158,17 +166,23 @@
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
-
-                <EditText
-                    android:id="@+id/edt_release_reward"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center|right"
-                    android:hint="请输入酬金，单位为元。"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/key_gray"
-                    android:textSize="14sp" />
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/TextAppearance.Design.Error">
+
+                    <EditText
+                        android:id="@+id/edt_release_reward"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|right"
+                        android:hint="请输入酬金，单位为元。"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/key_gray"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
             <View
@@ -191,17 +205,23 @@
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
-
-                <EditText
-                    android:id="@+id/edt_release_address"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center|right"
-                    android:hint="请输入需求的工作地点。"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/key_gray"
-                    android:textSize="14sp" />
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/TextAppearance.Design.Error">
+
+                    <EditText
+                        android:id="@+id/edt_release_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|right"
+                        android:hint="请输入需求的工作地点。"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/key_gray"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
             <View
@@ -224,16 +244,16 @@
                     android:textSize="14sp" />
 
 
-                <EditText
+                <TextView
                     android:id="@+id/edt_release_start_time"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:gravity="center|right"
                     android:hint="请输入需求起始时间"
                     android:textColor="@color/black"
                     android:textColorHint="@color/key_gray"
                     android:textSize="14sp" />
+
             </LinearLayout>
 
             <View
@@ -257,15 +277,15 @@
                     android:textSize="14sp" />
 
 
-                <EditText
+                <TextView
                     android:id="@+id/edt_release_end_time"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:gravity="center|right"
                     android:hint="请输入需求结束时间，这是需求显示结束时间。"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
+
             </LinearLayout>
 
             <View

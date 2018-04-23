@@ -174,8 +174,17 @@ public class DemandDetailFragment extends BaseFragment {
     }
 
     @Override
-    public void showError(String msg) {
+    protected void showLoading() {
 
+    }
+
+    @Override
+    public void showError(String msg) {
+        if ("已发布".equals(type) || "待完成".equals(type) || "已完成".equals(type) || "已过期".equals(type)) {
+            mDemandAdapter.setEmptyView(loadingView);
+        } else if ("待接单".equals(type) || "已接单".equals(type) || "订单完成".equals(type)) {
+            mOrderAdapter.setEmptyView(loadingView);
+        }
     }
 
     public void updateRes(String type) {
@@ -187,7 +196,7 @@ public class DemandDetailFragment extends BaseFragment {
                 mDemandAdapter.setNewData(demandBeans);
                 swipeRefreshLayout.setRefreshing(false);
             } else {
-                if (count != 0) {
+                if (count == 0) {
                     mDemandAdapter.setEmptyView(emptyView);
                     swipeRefreshLayout.setRefreshing(false);
                 } else {

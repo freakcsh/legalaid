@@ -34,6 +34,11 @@ public class OrderAdapter extends BaseQuickAdapter<OrderBean, BaseViewHolder> {
         this.activity = activity;
     }
 
+    public OrderAdapter(int layoutResId, Activity activity) {
+        super(layoutResId);
+        this.activity = activity;
+    }
+
     @Override
     protected void convert(final BaseViewHolder helper, final OrderBean item) {
         if (item != null) {

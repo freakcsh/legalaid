@@ -8,17 +8,19 @@ import android.widget.TextView;
 
 import com.freak.legalaid.R;
 import com.freak.legalaid.app.Constants;
+import com.freak.legalaid.dialog.CommonTipsDialogFragment;
 import com.freak.legalaid.event.UserEvent;
 import com.freak.legalaid.library.base.BaseActivity;
 import com.freak.legalaid.library.net.RealmHelper;
 import com.freak.legalaid.library.rxjava.BasePresenter;
 import com.freak.legalaid.library.rxjava.RxBus;
+import com.freak.legalaid.utils.DialogUtil;
 import com.freak.legalaid.utils.SPUtils;
 import com.freak.legalaid.utils.ToastUtil;
 
-public class ReleaseDemand extends BaseActivity {
-    private EditText edt_release_title, edt_release_context, edt_release_reward, edt_release_address, edt_release_start_time, edt_release_end_time;
-    private TextView tv_release_user_name;
+public class ReleaseDemand extends BaseActivity implements View.OnClickListener {
+    private EditText edt_release_title, edt_release_context, edt_release_reward, edt_release_address;
+    private TextView tv_release_user_name, tv_back, edt_release_start_time, edt_release_end_time;
     private Button btn_release;
     private RealmHelper mRealmHelper;
     private String userName;
@@ -42,6 +44,89 @@ public class ReleaseDemand extends BaseActivity {
         edt_release_start_time = findViewById(R.id.edt_release_start_time);
         edt_release_end_time = findViewById(R.id.edt_release_end_time);
         btn_release = findViewById(R.id.btn_release);
+        tv_back = findViewById(R.id.tv_back);
+        edt_release_start_time.setOnClickListener(this);
+        edt_release_end_time.setOnClickListener(this);
+        tv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!TextUtils.isEmpty(edt_release_title.getText().toString().trim())) {
+                    DialogUtil.showCommonDialog(ReleaseDemand.this, "警告", "是否退出当前编辑？", "取消", "确定", new CommonTipsDialogFragment.OnTipsListener() {
+                        @Override
+                        public void onCancel() {
+
+                        }
+
+                        @Override
+                        public void onSucceed() {
+                            finish();
+                        }
+                    });
+                } else if (!TextUtils.isEmpty(edt_release_context.getText().toString().trim())) {
+                    DialogUtil.showCommonDialog(ReleaseDemand.this, "警告", "是否退出当前编辑？", "取消", "确定", new CommonTipsDialogFragment.OnTipsListener() {
+                        @Override
+                        public void onCancel() {
+
+                        }
+
+                        @Override
+                        public void onSucceed() {
+                            finish();
+                        }
+                    });
+                } else if (!TextUtils.isEmpty(edt_release_reward.getText().toString().trim())) {
+                    DialogUtil.showCommonDialog(ReleaseDemand.this, "警告", "是否退出当前编辑？", "取消", "确定", new CommonTipsDialogFragment.OnTipsListener() {
+                        @Override
+                        public void onCancel() {
+
+                        }
+
+                        @Override
+                        public void onSucceed() {
+                            finish();
+                        }
+                    });
+                } else if (!TextUtils.isEmpty(edt_release_address.getText().toString().trim())) {
+                    DialogUtil.showCommonDialog(ReleaseDemand.this, "警告", "是否退出当前编辑？", "取消", "确定", new CommonTipsDialogFragment.OnTipsListener() {
+                        @Override
+                        public void onCancel() {
+
+                        }
+
+                        @Override
+                        public void onSucceed() {
+                            finish();
+                        }
+                    });
+                } else if (!TextUtils.isEmpty(edt_release_start_time.getText().toString().trim())) {
+                    DialogUtil.showCommonDialog(ReleaseDemand.this, "警告", "是否退出当前编辑？", "取消", "确定", new CommonTipsDialogFragment.OnTipsListener() {
+                        @Override
+                        public void onCancel() {
+
+                        }
+
+                        @Override
+                        public void onSucceed() {
+                            finish();
+                        }
+                    });
+                } else if (!TextUtils.isEmpty(edt_release_end_time.getText().toString().trim())) {
+                    DialogUtil.showCommonDialog(ReleaseDemand.this, "警告", "是否退出当前编辑？", "取消", "确定", new CommonTipsDialogFragment.OnTipsListener() {
+                        @Override
+                        public void onCancel() {
+
+                        }
+
+                        @Override
+                        public void onSucceed() {
+                            finish();
+                        }
+                    });
+                } else {
+                    finish();
+                }
+            }
+        });
         mRealmHelper = new RealmHelper();
         userName = (String) SPUtils.get(this, Constants.REAL_M_HELPER_USERNAME, "");
         if (!TextUtils.isEmpty(userName)) {
@@ -92,5 +177,17 @@ public class ReleaseDemand extends BaseActivity {
     @Override
     public void showError(String msg) {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.edt_release_start_time:
+                DialogUtil.showBirthDayeDialog(ReleaseDemand.this, edt_release_start_time);
+                break;
+            case R.id.edt_release_end_time:
+                DialogUtil.showBirthDayeDialog(ReleaseDemand.this, edt_release_end_time);
+                break;
+        }
     }
 }

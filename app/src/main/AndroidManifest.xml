@@ -58,7 +58,12 @@
         <activity android:name=".model_information.BillActivity" />
         <activity android:name=".model_information.PayPassWordActivity" />
         <activity android:name=".model_information.MyAccountRechargeActivity" />
-        <activity android:name=".model_demand.ReleaseDemand"/>
+        <activity android:name=".model_demand.ReleaseDemand" />
+        <activity android:name=".model_home.HomeDataShowActivity" />
+        <activity android:name=".model_information.OrderActivity" />
+        <activity android:name=".model_information.SettingActivity" />
+        <activity android:name=".model_information.AboutActivity" />
+        <activity android:name=".model_information.AccountBindingActivity"></activity>
     </application>
 
 </manifest>

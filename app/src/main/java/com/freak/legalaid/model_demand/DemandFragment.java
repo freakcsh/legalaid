@@ -179,6 +179,11 @@ public class DemandFragment extends BaseFragment {
 
     }
 
+    @Override
+    protected void showLoading() {
+
+    }
+
 
     @Override
     public void showError(String msg) {
